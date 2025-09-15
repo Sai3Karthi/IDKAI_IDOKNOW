@@ -1,0 +1,11 @@
+# Frontend-specific .gitignore
+# See main .gitignore in the project root for comprehensive rules
+
+# This file is kept minimal as most rules are in the root .gitignore
+# Only add rules here that are specific to the frontend and not covered in the root file
+
+# Local env files specific to frontend development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
