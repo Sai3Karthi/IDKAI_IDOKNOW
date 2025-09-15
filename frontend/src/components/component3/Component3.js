@@ -43,6 +43,7 @@ export default function Component3() {
   const cacheSnapshotRef = useRef(null);
   const [showChart, setShowChart] = useState(false); // defer chart mount
   const [revealedColors, setRevealedColors] = useState([]); // progressive color reveal order
+  const [chartFullyLoaded, setChartFullyLoaded] = useState(false); // track when chart is fully loaded
   const cardsContainerRef = useRef(null);
   const chartAnchorRef = useRef(null); // anchor spot to scroll before chart appears
 
@@ -423,7 +424,14 @@ export default function Component3() {
     if (!showChart) return;
     const allColors = Object.keys(perspectivesByColor);
     if (allColors.length === 0) return;
-    if (revealedColors.length >= allColors.length) return;
+    
+    // Check if all colors have been revealed (chart fully loaded)
+    if (revealedColors.length >= allColors.length) {
+      // Set chart as fully loaded after a small delay to ensure rendering completes
+      const loadedTimer = setTimeout(() => setChartFullyLoaded(true), 500);
+      return () => clearTimeout(loadedTimer);
+    }
+    
     const next = allColors.filter(c => !revealedColors.includes(c))[0];
     if (!next) return;
     const t = setTimeout(() => {
@@ -613,9 +621,13 @@ export default function Component3() {
               )}
               
               {/* Container Cover from Aceternity UI */}
-              <div className="mt-8 flex justify-center">
-                <Cover className="text-xl font-bold">
-                  Warp Speed Analysis
+              <div className="mt-8 flex justify-center w-full">
+                <Cover 
+                  className="text-xl font-bold"
+                  autoPlay={chartFullyLoaded} // Only auto-play when chart is fully loaded
+                  autoPlayDelay={100} // Minimal delay after chart is loaded - almost instant
+                >
+                  Cleaning it all up
                 </Cover>
               </div>
             </div>

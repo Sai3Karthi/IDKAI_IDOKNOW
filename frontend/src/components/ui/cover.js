@@ -7,15 +7,19 @@ import { SparklesCore } from "./sparkles";
 export const Cover = ({
   children,
   className,
+  autoPlay = false,
+  autoPlayDelay = 5500 // Default delay of 5.5 seconds
 }) => {
   const [hovered, setHovered] = useState(false);
-
- 
+  const [animationPhase, setAnimationPhase] = useState("initial"); // initial, animating, completed
+  const [displayText, setDisplayText] = useState(children);
+  
   const ref = useRef(null);
  
   const [containerWidth, setContainerWidth] = useState(0);
   const [beamPositions, setBeamPositions] = useState([]);
  
+  // Initialize beam positions and container width
   useEffect(() => {
     if (ref.current) {
       setContainerWidth(ref.current?.clientWidth ?? 0);
@@ -28,14 +32,57 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  }, [ref.current]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
+  // Update display text whenever children prop changes
+  useEffect(() => {
+    if (animationPhase !== "completed") {
+      setDisplayText(children);
+    }
+  }, [children, animationPhase]);
+
+  // Auto-play animation effect
+  useEffect(() => {
+    let autoPlayTimer;
+    let autoPlayDuration;
+    let textChangeTimer;
+    
+    if (autoPlay) {
+      // Start the auto-play after the specified delay
+      autoPlayTimer = setTimeout(() => {
+        setHovered(true);
+        setAnimationPhase("animating");
+        
+        // Keep the animation visible for 4 seconds exactly
+        autoPlayDuration = setTimeout(() => {
+          setHovered(false);
+          
+          // Change text and keep it visible
+          textChangeTimer = setTimeout(() => {
+            setDisplayText("All cleaned and distributed");
+            setAnimationPhase("completed");
+            // Keep the component visible but without animation effects
+            setHovered(false);
+          }, 300); // Small delay after animation ends for smooth transition
+        }, 4000);
+      }, autoPlayDelay);
+    }
+    
+    return () => {
+      clearTimeout(autoPlayTimer);
+      clearTimeout(autoPlayDuration);
+      clearTimeout(textChangeTimer);
+    };
+  }, [autoPlay, autoPlayDelay]);
  
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-neutral-900 group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2 transition duration-200 rounded-sm"
+      className={cn(
+        "relative group/cover block w-full px-6 py-3 transition duration-200 rounded-sm",
+        hovered ? "bg-neutral-900" : "bg-transparent"
+      )}
     >
       <AnimatePresence>
         {hovered && (
@@ -96,48 +143,59 @@ export const Cover = ({
         />
       ))}
       <motion.span
-        key={String(hovered)}
+        key={`${animationPhase}-${String(hovered)}`}
+        initial={{ opacity: animationPhase === "completed" ? 1 : 0 }} // Start visible if completed phase
         animate={{
-          scale: hovered ? 0.8 : 1,
-          x: hovered ? [0, -30, 30, -30, 30, 0] : 0,
-          y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
+          opacity: hovered || animationPhase === "completed" ? 1 : 0, // Show during animation or after completion
+          scale: hovered ? 0.9 : animationPhase === "completed" ? 1.1 : 1, // Less scaling during animation, larger when completed
+          x: hovered ? [0, -20, 20, -20, 20, 0] : 0, // Reduced movement for larger text
+          y: hovered ? [0, 20, -20, 20, -20, 0] : 0, // Reduced movement for larger text
         }}
         exit={{
+          opacity: animationPhase === "completed" ? 1 : 0, // Stay visible if completed
           filter: "none",
           scale: 1,
           x: 0,
           y: 0,
         }}
         transition={{
+          opacity: {
+            duration: animationPhase === "completed" ? 0.8 : 0.3, // Slower fade in for final state
+          },
           duration: 0.2,
           x: {
-            duration: 0.2,
-            repeat: Infinity,
+            duration: 0.4, // Slower movement for larger text
+            repeat: hovered ? Infinity : 0,
             repeatType: "loop",
           },
           y: {
-            duration: 0.2,
-            repeat: Infinity,
+            duration: 0.4, // Slower movement for larger text
+            repeat: hovered ? Infinity : 0,
             repeatType: "loop",
           },
           scale: {
-            duration: 0.2,
+            duration: animationPhase === "completed" ? 0.8 : 0.2, // Slower scale for final state
           },
           filter: {
             duration: 0.2,
           },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
+          "block w-full relative z-20 transition duration-500 font-bold text-center drop-shadow-lg",
+          hovered 
+            ? "text-white text-3xl tracking-widest" // White text with increased size and letter spacing during animation (matching the completed style)
+            : animationPhase === "completed" 
+              ? "text-white text-3xl tracking-widest" // White text with increased size and letter spacing when completed
+              : "opacity-0 pointer-events-none", // Invisible initially
           className
         )}
       >
-        {children}
+        {displayText}
       </motion.span>
-      <CircleIcon className="absolute -right-[2px] -top-[2px]" />
-      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
-      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />
-      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} />
+      <CircleIcon className="absolute -right-[2px] -top-[2px]" hovered={hovered} />
+      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} hovered={hovered} />
+      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} hovered={hovered} />
+      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} hovered={hovered} />
     </div>
   );
 };
@@ -204,11 +262,15 @@ export const Beam = ({
 export const CircleIcon = ({
   className,
   delay,
+  hovered
 }) => {
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        `pointer-events-none animate-pulse h-2 w-2 rounded-full opacity-20`,
+        hovered 
+          ? "hidden bg-white" // When hovered or auto-play activated, hide circles and use white color
+          : "group-hover/cover:hidden bg-neutral-600 dark:bg-white group-hover/cover:bg-white",
         className
       )}
     ></div>
