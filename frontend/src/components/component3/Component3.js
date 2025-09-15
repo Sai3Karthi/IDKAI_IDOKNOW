@@ -1,9 +1,35 @@
-import React, { useState, useRef, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from "motion/react";
 // UI components
 import { ExpandablePerspectiveCards } from './cards/ExpandablePerspectiveCards';
 import { Button } from '../ui/button';
 import { StreamingBiasSignificanceMotionChart } from './StreamingBiasSignificanceMotionChart';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
+import { Cover } from '../ui/cover';
+import { Module3PerspectiveDisplay } from './Module3PerspectiveDisplay';
+
+// Environment-driven orchestrator port (falls back to 8001)
+const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8001;
+const ORCH_HTTP = `http://localhost:${ORCHESTRATOR_PORT}`;
+const ORCH_WS = `ws://localhost:${ORCHESTRATOR_PORT}/ws/perspectives`;
+
+// Utility: compute significance explanation given total perspective count and/or provided significance
+function buildSignificanceExplanation(totalPerspectives, inputSignificance) {
+  if (!totalPerspectives) return null;
+  const N = totalPerspectives;
+  let s;
+  let derived = false;
+  if (typeof inputSignificance === 'number' && !Number.isNaN(inputSignificance)) {
+    s = Math.min(1, Math.max(0, inputSignificance));
+  } else {
+    // Invert (approximate) N = ceil(128 * s^{2.8} + 8)
+    s = Math.pow(Math.max(0, (N - 8)) / 128, 1 / 2.8);
+    derived = true;
+  }
+  const raw = 128 * Math.pow(s, 2.8) + 8;
+  const forward = Math.ceil(raw);
+  return { N, s, raw, forward, derived };
+}
 
 export default function Component3() {
   const [stage, setStage] = useState('idle'); // idle|queued|module1|module2|module3|done|error
@@ -14,11 +40,14 @@ export default function Component3() {
   const [perspectivesByColor, setPerspectivesByColor] = useState({});
   const wsRef = useRef(null);
   const [showWhyModal, setShowWhyModal] = useState(false);
-  const [selectedPerspectives, setSelectedPerspectives] = useState([]);
+  const [showClusteringDialog, setShowClusteringDialog] = useState(false); // Controls visibility of clustering explanation dialog
+  const [selectedPerspectives, setSelectedPerspectives] = useState([]); // Used by StreamingBiasSignificanceMotionChart
   const [cacheAvailable, setCacheAvailable] = useState(false);
   const cacheSnapshotRef = useRef(null);
   const [showChart, setShowChart] = useState(false); // defer chart mount
   const [revealedColors, setRevealedColors] = useState([]); // progressive color reveal order
+  const [chartFullyLoaded, setChartFullyLoaded] = useState(false); // track when chart is fully loaded
+  // Module3 chart is displayed in the JSX based on chartFullyLoaded state
   const cardsContainerRef = useRef(null);
   const chartAnchorRef = useRef(null); // anchor spot to scroll before chart appears
 
@@ -47,14 +76,13 @@ export default function Component3() {
       console.log('Attempting to connect to orchestrator WebSocket...');
       
       // Connect to the orchestrator's WebSocket endpoint
-      const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-      const ws = new WebSocket(`ws://localhost:${orchestratorPort}/ws/perspectives`);
+  const ws = new WebSocket(ORCH_WS);
       wsRef.current = ws;
       
       ws.onopen = () => {
         console.log('WebSocket connected successfully to orchestrator!');
         // Trigger pipeline through the orchestrator's /run endpoint
-        fetch(`http://localhost:${orchestratorPort}/run`, { 
+  fetch(`${ORCH_HTTP}/run`, { 
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -126,8 +154,7 @@ export default function Component3() {
     // Poll the orchestrator's status endpoint
     pollRef.current = setInterval(async () => {
       try {
-        const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-        const res = await fetch(`http://localhost:${orchestratorPort}/status`);
+  const res = await fetch(`${ORCH_HTTP}/status`);
         const data = await res.json();
         
         // Update component state based on orchestrator response
@@ -138,7 +165,7 @@ export default function Component3() {
         if (data.stage === 'module3' && data.progress > 0) {
           try {
             // Request the current perspective cache
-            const cacheRes = await fetch(`http://localhost:${orchestratorPort}/ws/cache`);
+            const cacheRes = await fetch(`${ORCH_HTTP}/ws/cache`);
             if (cacheRes.ok) {
               const cacheData = await cacheRes.json();
               console.log("Received perspective cache:", Object.keys(cacheData));
@@ -187,42 +214,42 @@ export default function Component3() {
     }, 2000);
   };
   
-  // Fallback simulation method if backend is unavailable
-  const simulatePipelineStages = () => {
-    clearInterval(pollRef.current);
-    
-    let moduleProgress = 0;
-    let currentModule = 'module1';
-    
-    pollRef.current = setInterval(() => {
-      moduleProgress += 5;
-      setProgress(moduleProgress);
-      
-      if (moduleProgress >= 100) {
-        moduleProgress = 0;
-        
-        if (currentModule === 'module1') {
-          currentModule = 'module2';
-        } else if (currentModule === 'module2') {
-          currentModule = 'module3';
-        } else if (currentModule === 'module3') {
-          clearInterval(pollRef.current);
-          setStage('done');
-          fetchResults();
-          return;
-        }
-      }
-      
-      setStage(currentModule);
-    }, 1000);
-  };
+  // Note: This simulation function is kept for future debugging but is not currently in use
+  // If needed for testing, call this function directly from startPipeline or elsewhere
+  // const simulatePipelineStages = () => {
+  //   clearInterval(pollRef.current);
+  //   
+  //   let moduleProgress = 0;
+  //   let currentModule = 'module1';
+  //   
+  //   pollRef.current = setInterval(() => {
+  //     moduleProgress += 5;
+  //     setProgress(moduleProgress);
+  //     
+  //     if (moduleProgress >= 100) {
+  //       moduleProgress = 0;
+  //       
+  //       if (currentModule === 'module1') {
+  //         currentModule = 'module2';
+  //       } else if (currentModule === 'module2') {
+  //         currentModule = 'module3';
+  //       } else if (currentModule === 'module3') {
+  //         clearInterval(pollRef.current);
+  //         setStage('done');
+  //         fetchResults();
+  //         return;
+  //       }
+  //     }
+  //     
+  //     setStage(currentModule);
+  //   }, 1000);
+  // };
 
   // Fetch results from orchestrator (GET)
   const fetchResults = async () => {
     try {
       // Fetch main results from orchestrator
-      const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-      const res = await fetch(`http://localhost:${orchestratorPort}/results`);
+  const res = await fetch(`${ORCH_HTTP}/results`);
       
       if (!res.ok) {
         throw new Error(`Results not ready (${res.status}): ${res.statusText}`);
@@ -262,8 +289,7 @@ export default function Component3() {
         setTimeout(() => {
           if (wsRef.current?.readyState === WebSocket.CLOSED) {
             try {
-              const orchestratorPort = 8000;  // Update this to match your orchestrator port
-              const ws = new WebSocket(`ws://localhost:${orchestratorPort}/ws/perspectives`);
+              const ws = new WebSocket(ORCH_WS); // reuse unified port
               wsRef.current = ws;
               
               ws.onopen = () => {
@@ -346,8 +372,7 @@ export default function Component3() {
     // Probe cache once on mount
     (async () => {
       try {
-        const orchestratorPort = 8001;
-        const res = await fetch(`http://localhost:${orchestratorPort}/ws/cache`);
+  const res = await fetch(`${ORCH_HTTP}/ws/cache`);
         if (res.ok) {
           const data = await res.json();
             // Determine if cache has at least one non-empty array
@@ -372,7 +397,7 @@ export default function Component3() {
         try { cardsContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch {}
       }
       // Step 2: shortly after, pre-scroll to chart anchor (even though chart not yet mounted)
-      const toAnchor = setTimeout(() => {
+      setTimeout(() => {
         if (chartAnchorRef.current) {
           try { chartAnchorRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch {}
         }
@@ -404,7 +429,14 @@ export default function Component3() {
     if (!showChart) return;
     const allColors = Object.keys(perspectivesByColor);
     if (allColors.length === 0) return;
-    if (revealedColors.length >= allColors.length) return;
+    
+    // Check if all colors have been revealed (chart fully loaded)
+    if (revealedColors.length >= allColors.length) {
+      // Set chart as fully loaded after a small delay to ensure rendering completes
+      const loadedTimer = setTimeout(() => setChartFullyLoaded(true), 500);
+      return () => clearTimeout(loadedTimer);
+    }
+    
     const next = allColors.filter(c => !revealedColors.includes(c))[0];
     if (!next) return;
     const t = setTimeout(() => {
@@ -430,23 +462,7 @@ export default function Component3() {
   const inputSignificance = results?.input_significance ?? results?.significance ?? null;
 
   // Build significance → perspective count explanation (or inverse derivation if s not provided)
-  const significanceExplanation = React.useMemo(() => {
-    if (!totalPerspectives) return null;
-    const N = totalPerspectives;
-    // If significance available, forward compute; else derive approximate s from N = ceil(128*s^{2.8}+8)
-    let s;
-    let derived = false;
-    if (typeof inputSignificance === 'number' && !Number.isNaN(inputSignificance)) {
-      s = Math.min(1, Math.max(0, inputSignificance));
-    } else {
-      // Invert (ignore ceil for approximation): s = ((N - 8)/128)^{1/2.8}
-      s = Math.pow(Math.max(0, (N - 8)) / 128, 1 / 2.8);
-      derived = true;
-    }
-    const raw = 128 * Math.pow(s, 2.8) + 8;
-    const forward = Math.ceil(raw);
-    return { N, s, raw, forward, derived };
-  }, [totalPerspectives, inputSignificance]);
+  const significanceExplanation = React.useMemo(() => buildSignificanceExplanation(totalPerspectives, inputSignificance), [totalPerspectives, inputSignificance]);
 
   const loadCache = () => {
     if (!cacheSnapshotRef.current) return;
@@ -607,6 +623,111 @@ export default function Component3() {
                     <div className="text-[9px] opacity-70">(Note: runtime curation or filtering adjusted final count)</div>
                   )}
                 </div>
+              )}
+              
+              {/* Container Cover from Aceternity UI */}
+              <div className="mt-8 flex justify-center w-full">
+                <Cover 
+                  className="text-xl font-bold"
+                  autoPlay={chartFullyLoaded} // Only auto-play when chart is fully loaded
+                  autoPlayDelay={100} // Minimal delay after chart is loaded - almost instant
+                >
+                  Cleaning it all up
+                </Cover>
+              </div>
+              
+              {/* Module3 Political Spectrum Visualization */}
+              {chartFullyLoaded && (
+                <motion.div 
+                  className="mt-16 pt-8 border-t border-border/40"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 5, duration: 0.8 }}
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-lg font-semibold">Final Perspective Analysis</h3>
+                    <button
+                      onClick={() => setShowClusteringDialog(true)}
+                      className="px-2.5 py-1.5 text-xs font-medium bg-card/90 hover:bg-card border border-border/60 rounded-md shadow-sm transition-colors flex items-center gap-1.5"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                      </svg>
+                      <span>View Analysis</span>
+                    </button>
+                  </div>
+                  <Module3PerspectiveDisplay />
+                  
+                  {showClusteringDialog && (
+                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                      <div className="bg-card border border-border rounded-lg shadow-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto">
+                        <div className="p-5">
+                          <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-lg font-semibold">Clustering Analysis Process</h3>
+                            <button 
+                              onClick={() => setShowClusteringDialog(false)}
+                              className="text-muted-foreground hover:text-foreground"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                              </svg>
+                            </button>
+                          </div>
+                          <div className="space-y-4 text-sm">
+                            <h4 className="font-semibold text-base">TOP-N K-MEANS CLUSTERING Process</h4>
+                            <p>Module 3 uses an adaptive stratified selection algorithm to categorize and distribute perspectives across the political spectrum. Here's how it works:</p>
+                            
+                            <div className="pl-4 border-l-2 border-border">
+                              <h5 className="font-medium">Step 1: Categorization</h5>
+                              <p>All perspectives are categorized into three groups based on their bias value:</p>
+                              <ul className="list-disc pl-6 my-2 space-y-1">
+                                <li><span className="font-medium">Leftist</span>: bias_x &lt; 0.428</li>
+                                <li><span className="font-medium">Common/Center</span>: 0.428 ≤ bias_x ≤ 0.571</li>
+                                <li><span className="font-medium">Rightist</span>: bias_x &gt; 0.571</li>
+                              </ul>
+                            </div>
+                            
+                            <div className="pl-4 border-l-2 border-border">
+                              <h5 className="font-medium">Step 2: Target Size Calculation</h5>
+                              <p>The algorithm determines how many total perspectives to keep based on the input size:</p>
+                              <ul className="list-disc pl-6 my-2 space-y-1">
+                                <li>7-14 perspectives → keep 6</li>
+                                <li>15-28 perspectives → keep 14</li>
+                                <li>29-77 perspectives → keep 21</li>
+                                <li>78-136 perspectives → keep 28</li>
+                              </ul>
+                            </div>
+                            
+                            <div className="pl-4 border-l-2 border-border">
+                              <h5 className="font-medium">Step 3: Proportional Distribution</h5>
+                              <p>The algorithm calculates how many perspectives to keep from each category based on their original proportions. This ensures fair representation across the spectrum.</p>
+                            </div>
+                            
+                            <div className="pl-4 border-l-2 border-border">
+                              <h5 className="font-medium">Step 4: Selection by Significance</h5>
+                              <p>Within each category, perspectives are sorted by their significance value, and the most significant ones are selected to meet the target count for each group.</p>
+                            </div>
+                            
+                            <div className="pl-4 border-l-2 border-border">
+                              <h5 className="font-medium">Visualization</h5>
+                              <p>The final selected perspectives are displayed on the Political Spectrum Chart with:</p>
+                              <ul className="list-disc pl-6 my-2">
+                                <li>X-axis representing bias (left to right)</li>
+                                <li>Y-axis representing significance</li>
+                                <li>Color-coded zones for different political leanings</li>
+                              </ul>
+                            </div>
+                            
+                            <p>This approach ensures that the most significant perspectives from each political leaning are represented, while maintaining the original distribution pattern of the data.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
               )}
             </div>
           )}

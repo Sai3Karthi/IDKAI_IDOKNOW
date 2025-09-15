@@ -154,7 +154,6 @@ export function ExpandablePerspectiveCards({ perspectivesByColor }) {
       {/* Grid with squeeze-on-hover behavior */}
       <div
         className="epc-grid"
-        data-hovering={typeof window !== 'undefined' && undefined}
         onMouseLeave={(e) => { e.currentTarget.removeAttribute('data-hovering'); }}
       >
         {cards.map(card => (

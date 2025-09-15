@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 #hello ive added this as a test
 #yes ok  =D
+#lol
 app = FastAPI(title="Pipeline Orchestrator (Module3 Only)", version="0.1")
 
 app.add_middleware(
@@ -181,6 +182,76 @@ def get_results():
             return json.load(f)  # Direct JSON load instead of read + parse
     except json.JSONDecodeError:
         return JSONResponse({"error": "invalid JSON in output file"}, status_code=500)
+    except IOError as e:
+        return JSONResponse({"error": f"file read error: {str(e)}"}, status_code=500)
+        
+# Module3 output endpoints
+@app.get("/module3/output/leftist")
+def get_module3_leftist():
+    """Get the leftist perspectives from module3 final output."""
+    # Only allow access when the pipeline is complete
+    if STATE["stage"] not in ["done", "idle", "error"]:
+        return JSONResponse({
+            "error": "Pipeline is still running. Files from previous run are not accessible.",
+            "stage": STATE["stage"],
+            "progress": STATE["progress"]
+        }, status_code=409)  # 409 Conflict
+    
+    leftist_file = MOD3_DIR / "final_output" / "leftist.json"
+    if not leftist_file.exists():
+        return JSONResponse({"error": "leftist output missing"}, status_code=404)
+    
+    try:
+        with open(leftist_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return JSONResponse({"error": "invalid JSON in leftist file"}, status_code=500)
+    except IOError as e:
+        return JSONResponse({"error": f"file read error: {str(e)}"}, status_code=500)
+
+@app.get("/module3/output/rightist")
+def get_module3_rightist():
+    """Get the rightist perspectives from module3 final output."""
+    # Only allow access when the pipeline is complete
+    if STATE["stage"] not in ["done", "idle", "error"]:
+        return JSONResponse({
+            "error": "Pipeline is still running. Files from previous run are not accessible.",
+            "stage": STATE["stage"],
+            "progress": STATE["progress"]
+        }, status_code=409)  # 409 Conflict
+    
+    rightist_file = MOD3_DIR / "final_output" / "rightist.json"
+    if not rightist_file.exists():
+        return JSONResponse({"error": "rightist output missing"}, status_code=404)
+    
+    try:
+        with open(rightist_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return JSONResponse({"error": "invalid JSON in rightist file"}, status_code=500)
+    except IOError as e:
+        return JSONResponse({"error": f"file read error: {str(e)}"}, status_code=500)
+
+@app.get("/module3/output/common")
+def get_module3_common():
+    """Get the common perspectives from module3 final output."""
+    # Only allow access when the pipeline is complete
+    if STATE["stage"] not in ["done", "idle", "error"]:
+        return JSONResponse({
+            "error": "Pipeline is still running. Files from previous run are not accessible.",
+            "stage": STATE["stage"],
+            "progress": STATE["progress"]
+        }, status_code=409)  # 409 Conflict
+    
+    common_file = MOD3_DIR / "final_output" / "common.json"
+    if not common_file.exists():
+        return JSONResponse({"error": "common output missing"}, status_code=404)
+    
+    try:
+        with open(common_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return JSONResponse({"error": "invalid JSON in common file"}, status_code=500)
     except IOError as e:
         return JSONResponse({"error": f"file read error: {str(e)}"}, status_code=500)
 

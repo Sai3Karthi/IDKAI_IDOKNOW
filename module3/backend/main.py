@@ -231,6 +231,45 @@ async def health_check():
         "server_time": time.time(),
         "backend_version": "1.0.0"
     }
+
+@app.get("/module3/output/{category}")
+async def get_module3_output(category: str):
+    """Get the perspective output data from module3 final_output directory.
+    
+    Args:
+        category: One of 'leftist', 'rightist', 'common'
+    """
+    # Check for active processing
+    # If we're still processing, don't allow access to previous run data
+    output_exists = os.path.exists("output.json")
+    clustering_exists = os.path.exists("final_output/common.json")
+    
+    # If output.json exists but clustering isn't done yet, we're still processing
+    if output_exists and not clustering_exists:
+        return JSONResponse({
+            "error": "Pipeline is still running. Files from previous run are not accessible.",
+            "stage": "processing",
+            "progress": 50
+        }, status_code=409)  # 409 Conflict
+    
+    # Validate category
+    valid_categories = ["leftist", "rightist", "common"]
+    if category not in valid_categories:
+        return JSONResponse({"error": f"Invalid category. Must be one of {valid_categories}"}, status_code=400)
+    
+    # Get file path
+    file_path = os.path.join(os.path.dirname(__file__), "final_output", f"{category}.json")
+    
+    if not os.path.exists(file_path):
+        return JSONResponse({"error": f"{category} output file not found"}, status_code=404)
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return JSONResponse({"error": f"Invalid JSON in {category} file"}, status_code=500)
+    except IOError as e:
+        return JSONResponse({"error": f"File read error: {str(e)}"}, status_code=500)
 if __name__ == "__main__":
     import uvicorn
     # Start server in a thread
