@@ -1,9 +1,33 @@
-import React, { useState, useRef, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 // UI components
 import { ExpandablePerspectiveCards } from './cards/ExpandablePerspectiveCards';
 import { Button } from '../ui/button';
 import { StreamingBiasSignificanceMotionChart } from './StreamingBiasSignificanceMotionChart';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
+import { Cover } from '../ui/cover';
+
+// Environment-driven orchestrator port (falls back to 8001)
+const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8001;
+const ORCH_HTTP = `http://localhost:${ORCHESTRATOR_PORT}`;
+const ORCH_WS = `ws://localhost:${ORCHESTRATOR_PORT}/ws/perspectives`;
+
+// Utility: compute significance explanation given total perspective count and/or provided significance
+function buildSignificanceExplanation(totalPerspectives, inputSignificance) {
+  if (!totalPerspectives) return null;
+  const N = totalPerspectives;
+  let s;
+  let derived = false;
+  if (typeof inputSignificance === 'number' && !Number.isNaN(inputSignificance)) {
+    s = Math.min(1, Math.max(0, inputSignificance));
+  } else {
+    // Invert (approximate) N = ceil(128 * s^{2.8} + 8)
+    s = Math.pow(Math.max(0, (N - 8)) / 128, 1 / 2.8);
+    derived = true;
+  }
+  const raw = 128 * Math.pow(s, 2.8) + 8;
+  const forward = Math.ceil(raw);
+  return { N, s, raw, forward, derived };
+}
 
 export default function Component3() {
   const [stage, setStage] = useState('idle'); // idle|queued|module1|module2|module3|done|error
@@ -47,14 +71,13 @@ export default function Component3() {
       console.log('Attempting to connect to orchestrator WebSocket...');
       
       // Connect to the orchestrator's WebSocket endpoint
-      const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-      const ws = new WebSocket(`ws://localhost:${orchestratorPort}/ws/perspectives`);
+  const ws = new WebSocket(ORCH_WS);
       wsRef.current = ws;
       
       ws.onopen = () => {
         console.log('WebSocket connected successfully to orchestrator!');
         // Trigger pipeline through the orchestrator's /run endpoint
-        fetch(`http://localhost:${orchestratorPort}/run`, { 
+  fetch(`${ORCH_HTTP}/run`, { 
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -126,8 +149,7 @@ export default function Component3() {
     // Poll the orchestrator's status endpoint
     pollRef.current = setInterval(async () => {
       try {
-        const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-        const res = await fetch(`http://localhost:${orchestratorPort}/status`);
+  const res = await fetch(`${ORCH_HTTP}/status`);
         const data = await res.json();
         
         // Update component state based on orchestrator response
@@ -138,7 +160,7 @@ export default function Component3() {
         if (data.stage === 'module3' && data.progress > 0) {
           try {
             // Request the current perspective cache
-            const cacheRes = await fetch(`http://localhost:${orchestratorPort}/ws/cache`);
+            const cacheRes = await fetch(`${ORCH_HTTP}/ws/cache`);
             if (cacheRes.ok) {
               const cacheData = await cacheRes.json();
               console.log("Received perspective cache:", Object.keys(cacheData));
@@ -221,8 +243,7 @@ export default function Component3() {
   const fetchResults = async () => {
     try {
       // Fetch main results from orchestrator
-      const orchestratorPort = 8001;  // Updated to match orchestrator running on port 8001
-      const res = await fetch(`http://localhost:${orchestratorPort}/results`);
+  const res = await fetch(`${ORCH_HTTP}/results`);
       
       if (!res.ok) {
         throw new Error(`Results not ready (${res.status}): ${res.statusText}`);
@@ -262,8 +283,7 @@ export default function Component3() {
         setTimeout(() => {
           if (wsRef.current?.readyState === WebSocket.CLOSED) {
             try {
-              const orchestratorPort = 8000;  // Update this to match your orchestrator port
-              const ws = new WebSocket(`ws://localhost:${orchestratorPort}/ws/perspectives`);
+              const ws = new WebSocket(ORCH_WS); // reuse unified port
               wsRef.current = ws;
               
               ws.onopen = () => {
@@ -346,8 +366,7 @@ export default function Component3() {
     // Probe cache once on mount
     (async () => {
       try {
-        const orchestratorPort = 8001;
-        const res = await fetch(`http://localhost:${orchestratorPort}/ws/cache`);
+  const res = await fetch(`${ORCH_HTTP}/ws/cache`);
         if (res.ok) {
           const data = await res.json();
             // Determine if cache has at least one non-empty array
@@ -430,23 +449,7 @@ export default function Component3() {
   const inputSignificance = results?.input_significance ?? results?.significance ?? null;
 
   // Build significance → perspective count explanation (or inverse derivation if s not provided)
-  const significanceExplanation = React.useMemo(() => {
-    if (!totalPerspectives) return null;
-    const N = totalPerspectives;
-    // If significance available, forward compute; else derive approximate s from N = ceil(128*s^{2.8}+8)
-    let s;
-    let derived = false;
-    if (typeof inputSignificance === 'number' && !Number.isNaN(inputSignificance)) {
-      s = Math.min(1, Math.max(0, inputSignificance));
-    } else {
-      // Invert (ignore ceil for approximation): s = ((N - 8)/128)^{1/2.8}
-      s = Math.pow(Math.max(0, (N - 8)) / 128, 1 / 2.8);
-      derived = true;
-    }
-    const raw = 128 * Math.pow(s, 2.8) + 8;
-    const forward = Math.ceil(raw);
-    return { N, s, raw, forward, derived };
-  }, [totalPerspectives, inputSignificance]);
+  const significanceExplanation = React.useMemo(() => buildSignificanceExplanation(totalPerspectives, inputSignificance), [totalPerspectives, inputSignificance]);
 
   const loadCache = () => {
     if (!cacheSnapshotRef.current) return;
@@ -608,6 +611,13 @@ export default function Component3() {
                   )}
                 </div>
               )}
+              
+              {/* Container Cover from Aceternity UI */}
+              <div className="mt-8 flex justify-center">
+                <Cover className="text-xl font-bold">
+                  Warp Speed Analysis
+                </Cover>
+              </div>
             </div>
           )}
         </div>

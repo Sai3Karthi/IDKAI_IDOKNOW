@@ -128,22 +128,22 @@ export function StreamingBiasSignificanceMotionChart({
   const axisAnim = (delay = 0) => animateAxis ? { initial: { pathLength: 0 }, animate: { pathLength: 1, transition: { duration: 2.2, delay, ease: 'easeInOut' } } } : {};
 
   // LASSO HANDLERS
-  const toLocal = (clientX, clientY) => {
+  const toLocal = useCallback((clientX, clientY) => {
     const rect = svgRef.current.getBoundingClientRect();
     return { x: clientX - rect.left, y: clientY - rect.top };
-  };
-  const onPointerDown = (e) => {
+  }, []);
+  const onPointerDown = useCallback((e) => {
     if (e.button !== 0) return; // left only
     const { x, y } = toLocal(e.clientX, e.clientY);
     pointerDownRef.current = { x, y };
     setLasso({ x1: x, y1: y, x2: x, y2: y });
-  };
-  const onPointerMove = (e) => {
+  }, [toLocal]);
+  const onPointerMove = useCallback((e) => {
     if (!pointerDownRef.current) return;
     const { x, y } = toLocal(e.clientX, e.clientY);
     setLasso(l => l ? { ...l, x2: x, y2: y } : l);
-  };
-  const onPointerUp = () => {
+  }, [toLocal]);
+  const onPointerUp = useCallback(() => {
     if (!pointerDownRef.current) return;
     const { x: xStart, y: yStart } = pointerDownRef.current;
     pointerDownRef.current = null;
@@ -158,7 +158,7 @@ export function StreamingBiasSignificanceMotionChart({
       onSelectionChange && onSelectionChange(selected);
       return null;
     });
-  };
+  }, [points, xScale, yScale, onSelectionChange]);
   useEffect(() => {
     const el = svgRef.current;
     if (!el) return;
@@ -170,7 +170,7 @@ export function StreamingBiasSignificanceMotionChart({
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerup', onPointerUp);
     };
-  });
+  }, [onPointerDown, onPointerMove, onPointerUp]);
 
   // Quadrant midlines (split at 0 bias and mid of significance domain)
   const midYVal = (yMin + yMax) / 2;
