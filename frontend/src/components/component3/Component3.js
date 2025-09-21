@@ -8,8 +8,8 @@ import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { Cover } from '../ui/cover';
 import { Module3PerspectiveDisplay } from './Module3PerspectiveDisplay';
 
-// Environment-driven orchestrator port (falls back to 8001)
-const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8001;
+// Environment-driven orchestrator port (falls back to 8000 - orchestrator port)
+const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8000;
 const ORCH_HTTP = `http://localhost:${ORCHESTRATOR_PORT}`;
 const ORCH_WS = `ws://localhost:${ORCHESTRATOR_PORT}/ws/perspectives`;
 
@@ -41,7 +41,7 @@ export default function Component3() {
   const wsRef = useRef(null);
   const [showWhyModal, setShowWhyModal] = useState(false);
   const [showClusteringDialog, setShowClusteringDialog] = useState(false); // Controls visibility of clustering explanation dialog
-  const [selectedPerspectives, setSelectedPerspectives] = useState([]); // Used by StreamingBiasSignificanceMotionChart
+  const [, setSelectedPerspectives] = useState([]); // Used by StreamingBiasSignificanceMotionChart
   const [cacheAvailable, setCacheAvailable] = useState(false);
   const cacheSnapshotRef = useRef(null);
   const [showChart, setShowChart] = useState(false); // defer chart mount
@@ -662,7 +662,7 @@ export default function Component3() {
                   
                   {showClusteringDialog && (
                     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                      <div className="bg-card border border-border rounded-lg shadow-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto">
+                      <div className="bg-card border border-border rounded-lg shadow-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto scrollbar-thin">
                         <div className="p-5">
                           <div className="flex items-center justify-between mb-4">
                             <h3 className="text-lg font-semibold">Clustering Analysis Process</h3>

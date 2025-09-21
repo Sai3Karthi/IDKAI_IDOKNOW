@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { PoliticalSpectrumChart } from './PoliticalSpectrumChart';
 
 // Environment-driven orchestrator port (falls back to 8001)
-const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8001;
+const ORCHESTRATOR_PORT = process.env.REACT_APP_ORCHESTRATOR_PORT || 8000;
 const ORCH_HTTP = `http://localhost:${ORCHESTRATOR_PORT}`;
 
 /**

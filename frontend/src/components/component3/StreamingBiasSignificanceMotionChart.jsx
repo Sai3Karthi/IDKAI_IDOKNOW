@@ -107,8 +107,8 @@ export function StreamingBiasSignificanceMotionChart({
   const innerW = Math.max(0, width - margin.left - margin.right);
   const innerH = Math.max(0, height - margin.top - margin.bottom);
 
-  const xScale = v => margin.left + ((v - xMin) / (xMax - xMin || 1)) * innerW;
-  const yScale = v => margin.top + innerH - ((v - yMin) / (yMax - yMin || 1)) * innerH;
+  const xScale = useCallback(v => margin.left + ((v - xMin) / (xMax - xMin || 1)) * innerW, [margin.left, xMin, xMax, innerW]);
+  const yScale = useCallback(v => margin.top + innerH - ((v - yMin) / (yMax - yMin || 1)) * innerH, [margin.top, innerH, yMin, yMax]);
 
   // Detect new points
   const newIds = [];
@@ -145,7 +145,6 @@ export function StreamingBiasSignificanceMotionChart({
   }, [toLocal]);
   const onPointerUp = useCallback(() => {
     if (!pointerDownRef.current) return;
-    const { x: xStart, y: yStart } = pointerDownRef.current;
     pointerDownRef.current = null;
     setLasso(l => {
       if (!l) return null;

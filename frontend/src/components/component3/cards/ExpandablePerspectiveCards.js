@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback, useId, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { useOutsideClick } from "../../../hooks/use-outside-click";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "./ExpandablePerspectiveCards.css";
 
 /**

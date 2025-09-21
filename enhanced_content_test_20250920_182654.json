@@ -1,0 +1,12 @@
+{
+  "test_session": {
+    "timestamp": "2025-09-20T18:26:54.254122",
+    "test_type": "enhanced_content_test",
+    "version": "2.0",
+    "choice_selected": "2",
+    "includes_extracted_content": true,
+    "total_duration_seconds": 0.010702371597290039,
+    "total_duration_minutes": 0.00017837285995483398
+  },
+  "results": []
+}

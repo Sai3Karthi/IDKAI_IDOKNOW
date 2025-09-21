@@ -1,0 +1,22 @@
+# Orchestrator Requirements (Module1 + Module2 + Module3)
+# Module1 Dependencies
+requests>=2.31.0
+urllib3>=1.26.0
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+beautifulsoup4>=4.12.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+python-dotenv>=1.0.0
+
+# Module2 Dependencies
+google-generativeai>=0.3.0
+typing-extensions>=4.0.0
+google-api-python-client>=2.0.0
+
+# Additional dependencies for orchestrator
+websockets>=11.0.0
+
+# Module3 Dependencies (if needed)
+# Add any additional Module3 requirements here

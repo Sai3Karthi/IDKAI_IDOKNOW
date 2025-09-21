@@ -15,6 +15,14 @@ from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 import requests
 import argparse
 
+# Load environment variables
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+    print("[info] Environment variables loaded from .env file")
+except ImportError:
+    print("[info] python-dotenv not available, using system environment")
+
 # Add main_modules to path to import api_request
 sys.path.append(os.path.join(os.path.dirname(__file__), 'main_modules'))
 from main_modules import api_request
@@ -272,11 +280,15 @@ async def get_module3_output(category: str):
         return JSONResponse({"error": f"File read error: {str(e)}"}, status_code=500)
 if __name__ == "__main__":
     import uvicorn
+    
+    # Get port from environment, default to 8001
+    port = int(os.getenv("PIPELINE_PORT", 8001))
+    
     # Start server in a thread
     server_thread = threading.Thread(target=lambda: uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=8000,
+        port=port,
         reload=False,
         log_level="info"
     ))
@@ -295,7 +307,7 @@ if __name__ == "__main__":
 
     # Notify server after pipeline completes
     try:
-        requests.post("http://127.0.0.1:8000/api/pipeline_complete", json={"status": "done"})
+        requests.post(f"http://127.0.0.1:{port}/api/pipeline_complete", json={"status": "done"})
     except Exception as e:
         print(f"Failed to notify server: {e}")
 

@@ -1,0 +1,527 @@
+{
+  "test_session": {
+    "timestamp": "2025-09-20T13:24:18.663194",
+    "test_type": "enhanced_content_test",
+    "version": "2.0",
+    "choice_selected": "2",
+    "includes_extracted_content": true,
+    "total_duration_seconds": 187.83828568458557,
+    "total_duration_minutes": 3.1306380947430927
+  },
+  "results": [
+    {
+      "mode": "fast",
+      "description": "Subset claims with extracted content",
+      "speed_mode": true,
+      "data": {
+        "total_time": 187.8264775276184,
+        "successful_claims": 8,
+        "total_sources": 16,
+        "errors": [],
+        "claims_with_content": [
+          {
+            "claim_number": 1,
+            "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+            "claim_type": "leftist",
+            "bias_x": 0.0,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Carlyle makes two senior hires to boost direct-lending business ...",
+                "url": "https://www.reuters.com/business/finance/carlyle-makes-two-senior-hires-boost-direct-lending-business-2025-09-18/",
+                "snippet": "1 day ago ... Private equity firm Carlyle has hired two senior executives for its direct-lending business as it tries to boost its share of a growing ...",
+                "display_url": "www.reuters.com",
+                "search_query": "direct site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:22.590670",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "What went wrong at Smile Direct Club?",
+                "url": "https://www.bbc.com/news/business-67734200",
+                "snippet": "Dec 22, 2023 ... Instead, Smile Direct Club threatened legal action, accusing her team of inaccurately describing its process and defaming its business. \"I was ...",
+                "display_url": "www.bbc.com",
+                "search_query": "direct site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:22.590764",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+                "claim_bias_x": 0.0,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.reuters.com/business/finance/carlyle-makes-two-senior-hires-boost-direct-lending-business-2025-09-18/",
+                "source_title": "Carlyle makes two senior hires to boost direct-lending business ...",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\"\n        \n        Source: www.reuters.com\n        Context: 1 day ago ... Private equity firm Carlyle has hired two senior executives for its direct-lending business as it tries to boost its share of a growing ...\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the ...\"",
+                "search_query": "direct site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:24:29.513382",
+                "content_id": "e5c918364ba4962c66fd1f7679b53848",
+                "content_type": "fast_template_fallback"
+              },
+              {
+                "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+                "claim_bias_x": 0.0,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.bbc.com/news/business-67734200",
+                "source_title": "What went wrong at Smile Direct Club?",
+                "source_domain": "www.bbc.com",
+                "content": "What went wrong at Smile Direct Club? 23 December 2023 Share Save Natalie Sherman Business reporter, New York Share Save Getty Images Smile Direct Club served more than 2 million people before it went bust Mohammad Ahmad, a 17-year-old from New Jersey, signed up for Smile Direct Club in October, just a few weeks after the teeth straightening firm declared bankruptcy. He was enticed, he said, by a big discount on the company's invisible braces and assured that the financial problems wouldn't affect operations. But Mohammad never received the clear plastic aligners he was promised after the company shut down in December, leaving him, and thousands of customers like him, in the lurch. \"I basically got scammed,\" said Mohammad, who is still hoping for a refund of $1,000 (£788) from money he earns as a tutor. It was an ignominious end to the Tennessee-based business, which once had a market value of more than $8bn and had promised to disrupt traditional dentistry with lower cost, remotely- supervised care. The concept convinced more than two million customers. For Mohammad, who had already had braces, he just wanted to address some mild shifting that occurred after he failed to wear his retainer as instructed. But almost from its start, Smile Direct Club was defending itself from critics raising concerns about its practices. It was embroiled in legal battles with business groups representing traditional dentists and orthodontists, who said its remote treatment, often provided after customers mailed in impressions of their mouths they had taken at home, provided inadequate care, and accused the firm of misleading customers. Prominent investors, such as Hindenburg Research, which is known for betting against companies, had also voiced alarm, accusing Smile Direct Club of \"cutting corners\" and warning that it would \"wind up as a case study in why it's a bad idea to invest in a company that attempts to fit a complex, dangerous medical process onto a low-cost, high volume assembly line\". The company denied the allegations, deriding them as \"the latest in a stream of unevidenced and misleading attempts ... to thwart legitimate competition\". But it took the threat to its business seriously, moving aggressively to quash other negative reports. It threatened legal action against reporters, academics and forced unhappy customers to sign non-disclosure agreements to get a refund until a government lawsuit forced it to end the practice this year. The problems eventually caught up with Smile Direct Club, said Myron Guymon, president of the American Association of Orthodonists. Nasdaq The triumphant 2019 Nasdaq listing of Smile Direct Club proved to be the company's peak moment \"Orthodontics looks simple but it is a complex medical procedure and should start with an in-person exam and good diagnostic records,\" he said. Smile Direct Club executives did not respond to a request for comment. In its bankruptcy filing, the company traced its fall to familiar economic villains: the pandemic and rising prices, which it said had hurt its manufacturing operation, raised costs and squeezed its target customers. It also cited a $63m award a court ordered it to pay its arch-rival and former business partner Align Technology over a contract dispute. But Brandon Couillard, analyst at Jefferies, said that deeper issues were at play, noting that the cost of addressing reputational issues - not just about quality but also customer service - hurt its growth and forced the loss-making firm to spend too much on advertising. \"It's not hard to Google and find people who have had a bad experience,\" he said. \"As the business matured, people did become more aware of the brand and that wasn't always a positive experience.\" Smile Direct Club's triumphant 2019 listing on Nasdaq, the US stock market index, after a streak of explosive sales growth, proved it be the firm's peak moment. It raised more than $1bn and briefly transformed its young founders into billionaires. But sales soon started tumbling, falling from more than $750m in 2019 back to $470m last year. Advertising to win new customers consumed more than half of its revenues. Losses mounted. In September, when it filed for bankruptcy protection, the company had just $5m in cash and nearly $900m in debt. \"It was pretty clear that consumer interest in the brand had been eroding for some time,\" Mr Couillard said. Getty Images Critics of the company said in-person visits are important Investors later accused Smile Direct Club of omitting important information about its critics during its 2019 share sale, suing it for a breach of financial laws. But Sanjula Jain, chief research officer at healthcare analytics and research firm Trilliant Health, said Smile Direct Club's downfall is also a reminder of the limits to the market for remote health care, take-up of which her team has found has fallen in almost every area since the height of the pandemic. \"Consumer behaviours are not changing in the way that a lot of the market and virtual care providers want it to,\" she said. \"Will that change over time remains to be seen.\" University of Pennsylvania professor Anna Wexler, who has studied direct-to-consumer health firms, said she still sees a future in remote or partially remote orthodontic care, noting that younger generations especially are frustrated with the current health care options and looking for models that are more convenient and affordable. Her 2020 study of 470 customers who had received remote orthodontistry found that about 6% ended up having to return to a traditional doctor for follow-up treatment. But more than 87% were satisfied with their care, willing to accept imperfections for a lower cost. The study cautioned that Smile Direct Club's use of non-disclosure agreements might have skewed the responses. But Prof Wexler said said she had still expected it and other companies selling such treatment to embrace her findings. Instead, Smile Direct Club threatened legal action, accusing her team of inaccurately describing its process and defaming its business. \"I was shocked,\" she recalled, noting that her team had been careful not to identify companies by name. The clash - which has not been previously reported - ended with a letter to the editor. Prof Wexler said she was not sorry to see this particular business go, given its track record of trying to silence its critics. \"Maybe if they hadn't spent so much money on legal counsel they'd be in a better financial state,\" she said. Smile Direct Club customers 'left in lurch' Smile Direct Club dentistry firm shuts down Companies Dentistry",
+                "snippet": "Dec 22, 2023 ... Instead, Smile Direct Club threatened legal action, accusing her team of inaccurately describing its process and defaming its business. \"I was ...",
+                "search_query": "direct site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:24:33.661177",
+                "content_id": "c429acc8de46d23c1cea4ff6d0febf8a"
+              }
+            ],
+            "processing_time_seconds": 16.27397608757019,
+            "search_time_seconds": 3.0751774311065674,
+            "extract_time_seconds": 13.19875693321228,
+            "success": true
+          },
+          {
+            "claim_number": 2,
+            "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+            "claim_type": "leftist",
+            "bias_x": 0.3,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "BBC Audio | A Thorough Examination with Drs Chris and Xand",
+                "url": "https://www.bbc.com/audio/brand/m0017tcz",
+                "snippet": "Episodes (27 available) ... Drs Chris and Xand explore the science of exercise and the dangers of inactivity. ... The Van Tulleken twins explore the science of ...",
+                "display_url": "www.bbc.com",
+                "search_query": "thorough site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:38.972824",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "BBC Sounds - A Thorough Examination with Drs Chris and Xand ...",
+                "url": "https://www.bbc.com/sounds/brand/m0017tcz",
+                "snippet": "Episodes ... Drs Chris and Xand explore the science of exercise and the dangers of inactivity. ... The Van Tulleken twins explore the science of exercise and the ...",
+                "display_url": "www.bbc.com",
+                "search_query": "thorough site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:38.972920",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+                "claim_bias_x": 0.3,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.bbc.com/audio/brand/m0017tcz",
+                "source_title": "BBC Audio | A Thorough Examination with Drs Chris and Xand",
+                "source_domain": "www.bbc.com",
+                "content": "Follow Share A Thorough Examination with Drs Chris and Xand Drs Chris and Xand van Tulleken explore the science of exercise and the dangers of inactivity. Can Xand persuade Chris to do some exercise? Follow Share Episodes (27 available) Series 3: Exercise Exercise - Series 3 preview Series 3: Exercise Exercise - Series 3 preview Drs Chris and Xand explore the science of exercise and the dangers of inactivity. 30 Jan 2024 • 2 mins Series 3: Exercise S3. Ep 1 - The Miracle Cure Series 3: Exercise S3. Ep 1 - The Miracle Cure The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 2 - The Scale of the Crisis Series 3: Exercise S3. Ep 2 - The Scale of the Crisis The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 3 - Ultra Processed Exercise Series 3: Exercise S3. Ep 3 - Ultra Processed Exercise The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 4 - Too Late to Change? Series 3: Exercise S3. Ep 4 - Too Late to Change? The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 5 - Endurance Series 3: Exercise S3. Ep 5 - Endurance The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 6 - Overcoming Barriers Series 3: Exercise S3. Ep 6 - Overcoming Barriers The Van Tulleken twins explore exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 7 - Have Fun, Feel Good Series 3: Exercise S3. Ep 7 - Have Fun, Feel Good The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 8 - Activity Revolution Series 3: Exercise S3. Ep 8 - Activity Revolution The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 2: Can I Change? Can I Change? - Series 2 preview Series 2: Can I Change? Can I Change? - Series 2 preview Drs Chris and Xand van Tulleken explore if people can change and how they do it. 29 Nov 2022 • 4 mins 1 2 3",
+                "snippet": "Episodes (27 available) ... Drs Chris and Xand explore the science of exercise and the dangers of inactivity. ... The Van Tulleken twins explore the science of ...",
+                "search_query": "thorough site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:24:47.586179",
+                "content_id": "9be6fe7cb9bacb159d9c9a5b1208ab68"
+              },
+              {
+                "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+                "claim_bias_x": 0.3,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.bbc.com/sounds/brand/m0017tcz",
+                "source_title": "BBC Audio | A Thorough Examination with Drs Chris and Xand",
+                "source_domain": "www.bbc.com",
+                "content": "Follow Share A Thorough Examination with Drs Chris and Xand Drs Chris and Xand van Tulleken explore the science of exercise and the dangers of inactivity. Can Xand persuade Chris to do some exercise? Follow Share Episodes (27 available) Series 3: Exercise Exercise - Series 3 preview Series 3: Exercise Exercise - Series 3 preview Drs Chris and Xand explore the science of exercise and the dangers of inactivity. 30 Jan 2024 • 2 mins Series 3: Exercise S3. Ep 1 - The Miracle Cure Series 3: Exercise S3. Ep 1 - The Miracle Cure The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 2 - The Scale of the Crisis Series 3: Exercise S3. Ep 2 - The Scale of the Crisis The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 3 - Ultra Processed Exercise Series 3: Exercise S3. Ep 3 - Ultra Processed Exercise The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 4 - Too Late to Change? Series 3: Exercise S3. Ep 4 - Too Late to Change? The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 5 - Endurance Series 3: Exercise S3. Ep 5 - Endurance The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 6 - Overcoming Barriers Series 3: Exercise S3. Ep 6 - Overcoming Barriers The Van Tulleken twins explore exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 7 - Have Fun, Feel Good Series 3: Exercise S3. Ep 7 - Have Fun, Feel Good The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 3: Exercise S3. Ep 8 - Activity Revolution Series 3: Exercise S3. Ep 8 - Activity Revolution The Van Tulleken twins explore the science of exercise and the dangers of inactivity. 6 Feb 2024 • 28 mins Series 2: Can I Change? Can I Change? - Series 2 preview Series 2: Can I Change? Can I Change? - Series 2 preview Drs Chris and Xand van Tulleken explore if people can change and how they do it. 29 Nov 2022 • 4 mins 1 2 3",
+                "snippet": "Episodes ... Drs Chris and Xand explore the science of exercise and the dangers of inactivity. ... The Van Tulleken twins explore the science of exercise and the ...",
+                "search_query": "thorough site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:24:51.534860",
+                "content_id": "73a80d8683acd4682905c2dff1d3b52a"
+              }
+            ],
+            "processing_time_seconds": 17.90561580657959,
+            "search_time_seconds": 3.1100125312805176,
+            "extract_time_seconds": 14.795575857162476,
+            "success": true
+          },
+          {
+            "claim_number": 3,
+            "claim_text": "Focusing on 'preventable' is a legitimate political question about policy and resource allocation.",
+            "claim_type": "leftist",
+            "bias_x": 0.19,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "Fed rate-cut optimism has bond investors focusing on duration ...",
+                "url": "https://www.reuters.com/business/fed-rate-cut-optimism-has-bond-investors-focusing-duration-steeper-yield-curve-2025-09-16/",
+                "snippet": "4 days ago ... Bond investors are buying longer-term maturities up to 10-year debt and ramping up bets on a steeper yield curve, anticipating that the ...",
+                "display_url": "www.reuters.com",
+                "search_query": "focusing site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:56.775700",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Harris to target price gouging in first policy speech in North Carolina ...",
+                "url": "https://www.reuters.com/world/us/harris-detail-plans-cut-costs-key-policy-speech-north-carolina-2024-08-13/",
+                "snippet": "Aug 13, 2024 ... U.S. Vice President Kamala Harris will make her first policy-centered speech as Democratic presidential candidate on Friday, taking aim at ...",
+                "display_url": "www.reuters.com",
+                "search_query": "focusing site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:24:56.775738",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "Focusing on 'preventable' is a legitimate political question about policy and resource allocation.",
+                "claim_bias_x": 0.19,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.reuters.com/business/fed-rate-cut-optimism-has-bond-investors-focusing-duration-steeper-yield-curve-2025-09-16/",
+                "source_title": "Fed rate-cut optimism has bond investors focusing on duration ...",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"Focusing on 'preventable' is a legitimate political question about policy and resource allocation.\"\n        \n        Source: www.reuters.com\n        Context: 4 days ago ... Bond investors are buying longer-term maturities up to 10-year debt and ramping up bets on a steeper yield curve, anticipating that the ...\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"Focusing on 'preventable' is a legitimate political question about policy and re...\"",
+                "search_query": "focusing site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:25:03.459531",
+                "content_id": "18798bcecd2dd2deb5fa4a7d1414987e",
+                "content_type": "fast_template_fallback"
+              },
+              {
+                "claim_text": "Focusing on 'preventable' is a legitimate political question about policy and resource allocation.",
+                "claim_bias_x": 0.19,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.reuters.com/world/us/harris-detail-plans-cut-costs-key-policy-speech-north-carolina-2024-08-13/",
+                "source_title": "Harris to target price gouging in first policy speech in North Carolina ...",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"Focusing on 'preventable' is a legitimate political question about policy and resource allocation.\"\n        \n        Source: www.reuters.com\n        Context: Aug 13, 2024 ... U.S. Vice President Kamala Harris will make her first policy-centered speech as Democratic presidential candidate on Friday, taking aim at ...\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"Focusing on 'preventable' is a legitimate political question about policy and re...\"",
+                "search_query": "focusing site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:25:05.203970",
+                "content_id": "5be0386a89b2e957fe94f7495999e3b0",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 13.386682987213135,
+            "search_time_seconds": 3.0782384872436523,
+            "extract_time_seconds": 10.30842399597168,
+            "success": true
+          },
+          {
+            "claim_number": 4,
+            "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+            "claim_type": "leftist",
+            "bias_x": 0.07,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Donald Trump | Breaking News & Latest Updates | AP News",
+                "url": "https://apnews.com/hub/donald-trump",
+                "snippet": "Stay informed and read the latest breaking news and updates on Donald Trump from AP News, the definitive source for independent journalism.",
+                "display_url": "apnews.com",
+                "search_query": "trump site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:25:10.194305",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Latest Donald Trump News | Top Headlines on Donald Trump ...",
+                "url": "https://www.reuters.com/world/us/donald-trump/",
+                "snippet": "U.S. President Donald Trump said on Friday Republicans will hold a convention for the 2026 midterm elections, as his party seeks to maintain its narrow ...",
+                "display_url": "www.reuters.com",
+                "search_query": "trump site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:25:10.194367",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+                "claim_bias_x": 0.07,
+                "claim_significance_y": 0.8,
+                "source_url": "https://apnews.com/hub/donald-trump",
+                "source_title": "Donald Trump | Breaking News & Latest Updates | AP News",
+                "source_domain": "apnews.com",
+                "content": "President Donald Trump listens to a reporter’s question in the Oval Office of the White House, Friday, Sept. 19, 2025, in Washington. (AP Photo/Alex Brandon) Trump says US has carried out another fatal strike targeting alleged drug-smuggling boat President Donald Trump says the U.S. military has carried out its third fatal strike against an alleged drug smuggling vessel this month. 7 hours ago Read more ICE arrests nearly 550 in Chicago area as part of ‘Midway Blitz’ 9 hours ago Trump administration asks Supreme Court to strip legal protections from Venezuelan migrants 11 hours ago Trump signs proclamation adding $100K annual fee for H-1B visa applications 6 hours ago Trump says he and Xi will meet in South Korea in coming weeks and he’ll later go to China 9 hours ago Takeaways from RFK Jr.'s vaccine panel meeting on COVID-19 and childhood vaccines Why Newsom’s push for new House maps isn’t a sure thing, even in heavily Democratic California 160-mile march for democracy arrives in Washington from Philadelphia Over the span of 14 days, nearly 200 people marched from Philadelphia to Washington, DC in defense of democracy. (AP Video: Mike Pesoli) Watch More Kimmel’s suspension is “jawboning” by Trump administration, says free speech scholar Senate confirms Mike Waltz as Trump’s ambassador to the United Nations after months of delays Palestinian UN envoy reacts to US visa ban on Palestinian leaders ahead of General Assembly meeting After Kirk killing, more Republicans say US is headed in wrong direction, AP-NORC poll finds Pete Buttigieg returns to home state of Indiana to rally against redistricting DC leaders defend crime fighting efforts to Congress as federal law enforcement surge continues Tracking Trump’s second term Tracking approval and key issues: The latest AP-NORC polls July 22 · HUMERA LODHI, EUNICE ESOMONU, LINLEY SANDERS, HYOJIN YOO, PABLO BARRIA URENDA Tracking the lawsuits against Donald Trump’s executive actions February 22 · HUMERA LODHI, LINDSAY WHITEHURST, MIKE CATALINI, LINDA GORMAN Tracking Trump’s presidential promises January 20 · CAL WOODWARD, HUMERA LODHI, EUNICE ESOMONU Who Donald Trump chose to help lead in his second term as president April 10 · HUMERA LODHI, PARKER KAUFMANN, CHRISTOPHER L. KELLER Tracking Trump’s Cabinet nominations January 14 · PARKER KAUFMANN, HUMERA LODHI, CHRISTOPHER L. KELLER, SARA BURNETT The push alerts of the first 100 days of the Trump administration April 29 · MAYA SWEEDLER, SARA BURNETT, HUMERA LODHI, LINDA GORMAN, ANNIE NG More coverage of Donald Trump Crime victims’ families say Chicago violence is a problem, but sending in troops isn’t the answer 3 hours ago US Steel changes course and will keep processing raw steel at Granite City plant in Illinois 8 hours ago Man accused of trying to kill Trump says prosecutors haven’t proven assassination attempt 7 hours ago Tears of joy as Egyptian immigrant and Cincinnati chaplain is released from detention 8 hours ago 160-mile march for democracy arrives in Washington from Philadelphia 9 hours ago Trump administration moves to revoke permit for Massachusetts offshore wind project 9 hours ago Appeals court keeps New York’s gun restrictions in place, including Times Square and subway ban 9 hours ago Web of business interests shows that Kimmel’s future rests on far more than his jokes 10 hours ago Judge blocks USDA from collecting data about SNAP applicants in 21 states 11 hours ago Lawyers for Spanish-language journalist in ICE custody fear deportation after unfavorable ruling 8 hours ago Orthodox patriarch defends recognition of an independent Ukrainian church 11 hours ago Trump administration threatens further sanctions in escalating fight with Harvard 11 hours ago Trump appointee George Cook takes interim lead at Census Bureau amid new census push 11 hours ago Brazil’s health minister skips trip to UN assembly due to visa limitations from Trump administration 7 hours ago Trump administration proposes selling nearly $6 billion in weapons to Israel 11 hours ago House approves resolution honoring Charlie Kirk with dozens of Democrats opposed 10 hours ago Senate confirms Mike Waltz as Trump’s ambassador to the United Nations after months of delays 8 hours ago Texas A&M president steps down but doesn’t say if controversial classroom video was a factor 8 hours ago Former Ohio State football coach Jim Tressel, a political rookie, decides not to run for governor 11 hours ago Kimmel’s rise from radio to cultural icon hits roadblock with ABC’s suspension of late-night TV show 11 hours ago US attorney under pressure to charge Letitia James in mortgage fraud case has resigned 7 hours ago Florida federal judge tosses Trump’s $15B defamation lawsuit against The New York Times 10 hours ago Rights group calls for urgent action for 5 men deported by US and held in Eswatini without charges Yesterday Trump asks the Supreme Court to allow him to enforce transgender and nonbinary passport policy Yesterday Protesters arrested as demonstrators block vehicles at key immigration building near Chicago 2 hours ago Charlie Kirk’s AI resurrection ushers in a new era of digital grief Yesterday Who’s more excited to welcome this Trump ally to Virginia — Democrats or Republicans? 7 hours ago UN votes to let Palestinian leader address General Assembly by video after US visa denial Yesterday US military strike off the coast of Venezuela disrupts life in impoverished fishing communities Yesterday Kennedy’s vaccine advisers change COVID shot guidance, calling them an individual choice 8 hours ago Load More",
+                "snippet": "Stay informed and read the latest breaking news and updates on Donald Trump from AP News, the definitive source for independent journalism.",
+                "search_query": "trump site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:25:43.564656",
+                "content_id": "66d39f3bff5ebd2717795a3c40ccd3a6"
+              },
+              {
+                "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+                "claim_bias_x": 0.07,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.reuters.com/world/us/donald-trump/",
+                "source_title": "Latest Donald Trump News | Top Headlines on Donald Trump | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "3 hours ago Trump says Republican Party will hold convention for midterm elections U.S. President Donald Trump said on Friday Republicans will hold a convention for the 2026 midterm elections, as his party seeks to maintain its narrow control of Congress. 6 hours ago Trump says US struck alleged drug vessel in latest operation 8 hours ago Trump invokes 'golden share' to block U.S. Steel plans for Illinois plant, WSJ reports 9 hours ago Trump says Union Pacific merger with Norfolk Southern 'sounds good' 9 hours ago Trump says he is speaking with Afghanistan regarding Bagram air base Report This Ad Trump's Agenda June 9, 2025 Summer staffing crunch hits national parks after Trump cuts June 4, 2025 Exclusive: FEMA staff confused after head said he was unaware of US hurricane season July 7, 2025 Musk-Trump feud escalates with 'America Party' announcement April 1, 2025 Trump deported 238 Venezuelans to El Salvador. Dozens have active asylum cases Tracking presidential job approval Explainers June 10, 2025 Explainer: Does US law allow Trump to send troops to quell protests? May 7, 2025 How Trump unleashed executive power April 1, 2025 Tariffs don’t all act the same April 25, 2025 Explainer: Who accredits US universities and what does Trump want to change? US deports more alleged gang members to El Salvador mega-prison The U.S. has deported another 10 people that it alleges are gang members to El Salvador. via REUTERS/ secom Foreign Policy May 23, 2025 Trump's image of dead 'white farmers' came from Reuters footage in Congo, not South Africa June 11, 2025 World Bank cuts global growth forecast as trade tensions heighten uncertainty Immigration July 4, 2025 Boxer Chavez Jr expected to be deported to Mexico to serve sentence, Sheinbaum says July 5, 2025 Texas may not enforce migrant arrest law, US appeals court rules Economy April 24, 2025 The global economy is on a Trump roller-coaster ride June 9, 2025 Republican lawmaker’s raucous town hall reflects challenges promoting Trump's bill Legal June 7, 2025 US Supreme Court allows DOGE broad access to Social Security data September 11, 2025 Major cases involving Trump before the US Supreme Court In Pictures Targeting Tesla: Anti-Musk protests around the world Demonstrators protest against Elon Musk at Tesla dealerships around the world. REUTERS/ hannah mckay More coverage 9 hours ago In anti-ICE protest, Illinois Democrats tear-gassed, pepper-sprayed by federal agents Kat Abughazaleh, a Democratic congressional candidate, posted footage on social media that showed agents lifting her and throwing her onto the ground. 8 hours ago Top US prosecutor overseeing Letitia James case resigns after Trump threat The top prosecutor who is overseeing a criminal mortgage fraud investigation into New York Attorney General Letitia James resigned from his post on Friday, after President Donald Trump called for him to be removed from the job, according to an internal email seen by Reuters and a person familiar with the matter. World category · 11 hours ago Trump again asks US Supreme Court to end deportation protection for Venezuelans The Justice Department asked the justices to lift a federal judge's ruling that Homeland Security Secretary Noem lacked the authority to end the protections for Venezuelans under the temporary protected status program. 8 hours ago Trump order denying grants to artists over 'gender ideology' violated First Amendment, judge rules A federal judge on Friday blocked U.S. President Donald Trump's administration from disfavoring arts organizations deemed to be promoting \"gender ideology\" when deciding which ones should receive grants from the National Endowment for the Arts. 10 hours ago Trump administration strikes deal to regain control of Washington Union Station The Trump administration said late Friday it has struck a deal to restore federal control of Washington Union Station in the nation's capital. Business category · 1 hour ago Trump to impose $100,000 fee per year for H-1B visas, in blow to tech The Trump administration said on Friday it would ask companies to pay $100,000 per year for H-1B worker visas, prompting some big tech companies to warn visa holders to stay in the U.S. or quickly return. World category · 13 hours ago Trump says to host Turkey's Erdogan at White House on Sept. 25 U.S. President Donald Trump said on Friday that he will host Turkey's President Tayyip Erdogan at the White House on Sept. 25 and that he expected to conclude trade and military agreements. World category · 2 hours ago Trump administration places new restrictions on Harvard, citing financial concerns President Donald Trump's administration escalated its campaign against Harvard University on Friday, placing new restrictions on the Ivy League school's ability to access federal funds for student aid, citing concerns about the \"financial position\" of the oldest and richest university in the United States. Loading... Load more articles",
+                "snippet": "U.S. President Donald Trump said on Friday Republicans will hold a convention for the 2026 midterm elections, as his party seeks to maintain its narrow ...",
+                "search_query": "trump site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:26:16.062034",
+                "content_id": "48cd4413c1726722c62302b76f9d3d9d"
+              }
+            ],
+            "processing_time_seconds": 71.53301072120667,
+            "search_time_seconds": 3.06001615524292,
+            "extract_time_seconds": 68.47296953201294,
+            "success": true
+          },
+          {
+            "claim_number": 5,
+            "claim_text": "This incident raises important questions about the effectiveness of current crime prevention strategies.",
+            "claim_type": "leftist",
+            "bias_x": 0.33,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "France-Turkey tensions mount after NATO naval incident | Reuters",
+                "url": "https://www.reuters.com/article/world/france-turkey-tensions-mount-after-nato-naval-incident-idUSKBN2481II/",
+                "snippet": "Jul 7, 2020 ... PARIS/BRUSSELS (Reuters) - For France, it was the final straw. For Turkey, it was a misunderstanding. For NATO, it could be a turning point.",
+                "display_url": "www.reuters.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:26:21.797951",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022",
+                "url": "https://www.bbc.com/news/uk-66798508",
+                "snippet": "Sep 13, 2023 ... The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time. Russia had claimed the incident last ...",
+                "display_url": "www.bbc.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:26:21.797976",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This incident raises important questions about the effectiveness of current crime prevention strategies.",
+                "claim_bias_x": 0.33,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.reuters.com/article/world/france-turkey-tensions-mount-after-nato-naval-incident-idUSKBN2481II/",
+                "source_title": "France-Turkey tensions mount after NATO naval incident | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"This incident raises important questions about the effectiveness of current crime prevention strategies.\"\n        \n        Source: www.reuters.com\n        Context: Jul 7, 2020 ... PARIS/BRUSSELS (Reuters) - For France, it was the final straw. For Turkey, it was a misunderstanding. For NATO, it could be a turning point.\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"This incident raises important questions about the effectiveness of current crim...\"",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:26:28.546225",
+                "content_id": "23e16b6792b4e6a53dfb024b1858ba3f",
+                "content_type": "fast_template_fallback"
+              },
+              {
+                "claim_text": "This incident raises important questions about the effectiveness of current crime prevention strategies.",
+                "claim_bias_x": 0.33,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.bbc.com/news/uk-66798508",
+                "source_title": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022",
+                "source_domain": "www.bbc.com",
+                "content": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022 14 September 2023 Share Save Jonathan Beale Defence correspondent Share Save EPA A Russian SU-27, like those pictured, released a missile near the RAF plane A Russian pilot tried to shoot down an RAF surveillance plane after believing he had permission to fire, the BBC has learned. The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time . Russia had claimed the incident last September was caused by a \"technical malfunction\". The UK's Ministry of Defence (MoD) publicly accepted the Russian explanation. But now three senior Western defence sources with knowledge of the incident have told the BBC that Russian communications intercepted by the RAF RC-135 Rivet Joint aircraft give a very different account from the official version. The RAF plane - with a crew of up to 30 - was flying a surveillance mission over the Black Sea in international airspace on 29 September last year when it encountered two Russian SU-27 fighter jets. The intercepted communications show that one of the Russian pilots thought he had been given permission to target the British aircraft, following an ambiguous command from a Russian ground station. However, the second Russian pilot did not. He remonstrated and swore at his wingman when he fired the first missile. The Rivet Joint is loaded with sensors to intercept communications. The RAF crew would have been able to listen in to the incident which could have resulted in their own deaths. The MoD will not release details of those communications. Responding to these new revelations an MoD spokesperson said: \"Our intent has always been to protect the safety of our operations, avoid unnecessary escalation and inform the public and international community.\" What really happened As the two Russian SU-27s approached the RAF spy plane, they received a communication from their ground station controller. One Western source told the BBC the words they received were to the effect of \"you have the target\". This ambiguous language was interpreted by one of the Russian pilots as permission to fire. The loose language appears to have shown a high degree of unprofessionalism by those involved, sources said. In contrast, Nato pilots use very precise language when asking for and receiving permission to fire. The Russian pilot released an air-to-air missile, which successfully launched but failed to lock on to its target, the BBC has been told. It was a miss, not a malfunction. Defence sources have told the BBC that a row then broke out between the two Russian pilots. The pilot of the second SU-27 did not think they had been given permission to fire. He is said to have sworn at his comrade, effectively asking him what he thought he was doing. Yet the first pilot still released another missile. We had been told that the second missile simply fell from the wing - suggesting the weapon either malfunctioned or that the launch was aborted. What the UK MoD said happened Three weeks later, the UK government confirmed the incident had taken place - after an explanation from the Russian Ministry of Defence called it a \"technical malfunction\". In a statement to MPs on 20 October, the then Defence Secretary Ben Wallace called it a \"potentially dangerous engagement\". But he accepted the Russian explanation, saying: \"We do not consider this incident to constitute a deliberate escalation on the part of the Russians, and our analysis concurs that it was due to a malfunction.\" Russian jet released missile near RAF aircraft What the US said happened However, a secret intelligence leak revealed that the US military spoke of what happened in more stark terms. In a raft of documents, published online by US airman Jack Teixera, the same incident was described as \"a near shoot-down\". \"The incident was far more serious than originally portrayed and could have amounted to an act of war,\" the New York Times reported. According to two US defence officials, the newspaper said, the Russian pilot had misinterpreted an order from the ground. The Russian pilot \"who'd locked on the British Aircraft, fired, but the missile did not launch properly.\" The newspaper also quoted an unnamed US defence official describing the incident \"as really, really scary\". In response to the leaked report of a \"near shoot-down\" the UK MoD issued another statement which added more fog than clarity. The MoD claimed a \"significant proportion of the content of these reports [from the documents] is untrue, manipulated or both\". Why the secrecy? There may be several reasons why the UK's MoD was reluctant to give the full details. First, the UK would not want to publicise the extent of its intelligence gathering and details of the intercepted communications. More importantly neither side wanted an escalation - one which could potentially draw a Nato member into military confrontation with Russia. But the incident does show, once again, how one mistake and miscalculation by one individual could spark a wider conflict. The MoD has now told the BBC that \"this incident is a stark reminder of the potential consequences of Putin's barbaric invasion of Ukraine.\" This is not the first time a reckless Russian pilot has targeted a Nato aircraft in international air space. In March earlier this year, a Russian jet brought down a US unmanned surveillance drone, also flying over the Black Sea. In that incident the Russian pilot was awarded a medal, but most experts agree it was down to luck rather than skill or judgement. It highlights serious questions about the discipline and professionalism of Russia's air force. Despite the near shoot down, the RAF has continued to conduct surveillance flights over the Black Sea - a testament to the courage of the crews who narrowly avoided a disaster. Since the incident, these RAF surveillance flights have been escorted by Typhoon fighter jets armed with air-to-air missiles. The UK is the only Nato ally to conduct crewed missions over the Black Sea. Intercepting Russian 'Zombies' at a Nato airbase US airman hit with new charges in Pentagon leaks Duelling with Russian jets in the skies over Ukraine Russia-Ukraine war Royal Air Force Russia Ministry of Defence",
+                "snippet": "Sep 13, 2023 ... The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time. Russia had claimed the incident last ...",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T13:26:32.433792",
+                "content_id": "2a1de185aea5c4dfe1fb6e432a329947"
+              }
+            ],
+            "processing_time_seconds": 16.022889375686646,
+            "search_time_seconds": 2.8849263191223145,
+            "extract_time_seconds": 13.137929677963257,
+            "success": true
+          },
+          {
+            "claim_number": 6,
+            "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+            "claim_type": "common",
+            "bias_x": 0.45,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Search results for '\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=we+need+to",
+                "snippet": "Content related to: \"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:26:36.551786",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=we+need+to",
+                "snippet": "Content related to: \"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:26:36.551814",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+                "claim_bias_x": 0.45,
+                "claim_significance_y": 0.8,
+                "source_url": "https://bbc.com/search?q=we+need+to",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "'We don't need to change to fit in' These Muslim women are creating spaces to exercise in line with their faith. 10 Sep 2025 Why we need to learn to love our bugs Tim explains how modern habits have cut the diversity of bugs in our diet and offers five tips to fix it. 10 Sep 2025 'We need to ask' about gender-based violence A campaigner says Guernsey is 'behind' in getting data on violence against women and girls. 8 Sep 2025 'We need to make sure that we are taking action' - Lyons Gordon Lyons has rejected claims of a failure of political leadership on the issue. 3 Sep 2025 'We need to keep feet on the ground' - Clarke 'We need to keep feet on the ground' - Clarke 6 Sep 2025 Why we need to wake up to what's making us sick Tim reveals the shocking impact ultra-processed foods have on our healthcare system and overall health. 10 Sep 2025 'We need a player like him' - Flick excited to have Rashford Barcelona boss Hansi Flick says he's 'delighted' to have Marcus Rashford in his squad after the England international scored both goals for the La Liga champions as they beat Newcastle in the Champions League. 1 day ago We need your help to find meteorite that crashed into Scotland Hillwakers in Scotland have been asked to look out meteorite fragments that landed in the Highlands. 8 days ago Tackling hate crime: 'There's so much more we need to do' The Northern Ireland Executive needs to \"throw everything we have\" at tackling hate crime to ensure people feel welcome and included, First Minister Michelle O'Neill says. 4 Sep 2025 1 2 3 4 5 ... 1112",
+                "snippet": "Content related to: \"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:26:45.060970",
+                "content_id": "036cde7570856bf3851b41c9c9f35c77"
+              },
+              {
+                "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+                "claim_bias_x": 0.45,
+                "claim_significance_y": 0.8,
+                "source_url": "https://reuters.com/search?q=we+need+to",
+                "source_title": "Search results for '\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "source_domain": "reuters.com",
+                "content": "\n        Content related to: \"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\"\n        \n        Source: reuters.com\n        Context: Content related to: \"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"We need to analyze the specific circumstances to understand what preventative me...\"",
+                "search_query": "\"We need to analyze the specific circumstances to understand what preventative measures might have been effective.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:26:48.600896",
+                "content_id": "8a2ae3e2df74d93390910c46ad7fcc02",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 16.021573543548584,
+            "search_time_seconds": 2.6981897354125977,
+            "extract_time_seconds": 13.323354959487915,
+            "success": true
+          },
+          {
+            "claim_number": 7,
+            "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+            "claim_type": "common",
+            "bias_x": 0.54,
+            "significance_y": 0.75,
+            "sources_found": [
+              {
+                "title": "Search results for '\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=strengthening+hate+crime",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:26:52.543496",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=strengthening+hate+crime",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:26:52.543524",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+                "claim_bias_x": 0.54,
+                "claim_significance_y": 0.75,
+                "source_url": "https://bbc.com/search?q=strengthening+hate+crime",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "Mum of murdered boy calls for killer to be named The identity of the 15-year-old boy who killed Harvey Willgoose is protected due to his age. 12 Aug 2025 Week ahead in Parliament Hearings on Heathrow and Carillion, a Lords vote on the refit of the Palace of Westminster and Katie Price talking about online abuse are among the highlights. 2 Feb 2018 Prevent counter-terror scheme lambasted in review The UK's scheme to stop terrorism has \"apparently failed\" repeatedly to identify attackers, says report. 8 Feb 2023 Love Island: A turning point for travellers on TV? Will Tommy Fury's appearance on the reality show change how people see travellers? 30 Jul 2019 Hate crime vote delay after marathon Holyrood debate The government agrees limited changes to the controversial new law - but the final vote is put off until Thursday. 11 Mar 2021 The Anzac post, outrage and a race debate How a seven-word Facebook post set off months of controversy and intense discussion in Australia. 10 Aug 2017 Who should I vote for? Election 2019 manifesto guide Compare where the parties stand on key issues - from Brexit and the NHS to education and the environment. 11 Dec 2019 The week ahead in Parliament Law and order will dominate the Commons, but Dominic Cummings' committee appearance will turn heads. 12 Mar 2021 Thousands march against antisemitism in London Organisers say the event is the first of its kind since the Israel-Gaza war broke out. 27 Nov 2023 1 2 3",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:27:01.207345",
+                "content_id": "7510e46544cffe257b7a6b1ac8ff42b1"
+              },
+              {
+                "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+                "claim_bias_x": 0.54,
+                "claim_significance_y": 0.75,
+                "source_url": "https://reuters.com/search?q=strengthening+hate+crime",
+                "source_title": "Search results for '\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "source_domain": "reuters.com",
+                "content": "\n        Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\"\n        \n        Source: reuters.com\n        Context: Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less ...\"",
+                "search_query": "\"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:27:04.597043",
+                "content_id": "b30c8c74bf435e120001927c8a4573ee",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 15.963433504104614,
+            "search_time_seconds": 2.4207804203033447,
+            "extract_time_seconds": 13.542623519897461,
+            "success": true
+          },
+          {
+            "claim_number": 8,
+            "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+            "claim_type": "common",
+            "bias_x": 0.47,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "Search results for '\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=this+incident+highlights",
+                "snippet": "Content related to: \"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:27:08.690291",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=this+incident+highlights",
+                "snippet": "Content related to: \"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T13:27:08.690311",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+                "claim_bias_x": 0.47,
+                "claim_significance_y": 0.7,
+                "source_url": "https://bbc.com/search?q=this+incident+highlights",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "Spate of racist graffiti sparks police inquiry Racially-offensive graffiti have been reported at Foxwood Lane, Hob Moor and Chesney Fields in York. 5 days ago Road reopens after lorry strike on railway bridge A similar incident in February led to Hull MP Karl Turner calling for \"urgent action\" on Stoneferry Road. 4 Sep 2025 App launches for reporting street harassment Start Safe, Stay Safe will allow victims to feel safer reporting crime, according to Women Unlocked. 2 days ago Man suffers 'life-changing' injuries in assault The attack happened on Spring Bank in Hull in the early hours of Sunday morning, police say. 7 Sep 2025 Firm fined £266k after worker crushed by lorries The Bradford-based steel firm has apologised after a woman was left with life-changing injuries. 16 hrs ago 'I was spiked but don't think I'll get justice' Amber Clarke was enjoying a night out with friends in Skegness when the alleged incident took place. 2 days ago Heatley 'traumatised' by wall collision incident Carrick Rangers winger Paul Heatley says he felt \"traumatised\" after suffering injuries in a collision with the wall surrounding the pitch during Saturday's game against Bangor at Taylors Avenue. 2 days ago Woman's ear bitten in pub assault, police say Councillors opt not to revoke the license for the Hope Inn pub following a review on Tuesday. 2 Sep 2025 Football clubs back police domestic abuse campaign Hull City AFC, Grimsby Town FC and Scunthorpe United FC have joined the domestic abuse campaign. 6 Sep 2025 1 2 3 4 5 ... 284",
+                "snippet": "Content related to: \"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:27:17.828640",
+                "content_id": "e859669c218642c2b1aaef0e4fc4d477"
+              },
+              {
+                "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+                "claim_bias_x": 0.47,
+                "claim_significance_y": 0.7,
+                "source_url": "https://reuters.com/search?q=this+incident+highlights",
+                "source_title": "We can't find that page",
+                "source_domain": "reuters.com",
+                "content": "We can't find that page The page may have moved, or the address may have been entered incorrectly. Try using the navigation to find stories of interest, or browse our latest stories. Go to the Reuters.com Homepage",
+                "snippet": "Content related to: \"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"This incident highlights the need for better integration of immigrants into local communities.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T13:27:23.165889",
+                "content_id": "bc2f872044ff669ea1f48a3fca0ef096"
+              }
+            ],
+            "processing_time_seconds": 18.6674325466156,
+            "search_time_seconds": 3.034951686859131,
+            "extract_time_seconds": 15.632444381713867,
+            "success": true
+          }
+        ],
+        "average_time_per_claim": 23.4783096909523,
+        "success_rate_percent": 100.0,
+        "total_claims_processed": 8,
+        "total_available_claims": 16,
+        "tested_all_claims": false,
+        "leftist_claims_available": 12,
+        "common_claims_available": 4,
+        "leftist_claims_processed": 5,
+        "common_claims_processed": 3,
+        "mode_name": "⚡ FAST MODE - WITH CONTENT",
+        "speed_mode": true,
+        "total_time_minutes": 3.1304412921269735,
+        "estimated_full_time_minutes": 6.260882584253947
+      }
+    }
+  ]
+}

@@ -10,7 +10,7 @@ import os
 import re
 import time
 from typing import Optional, Tuple, List, Dict, Any
-from google import genai
+import google.genai as genai
 from google.genai import types
 
 
@@ -72,7 +72,9 @@ def build_client(endpoint: str) -> genai.Client:
             "Endpoint must match pattern projects/<project>/locations/<region>/endpoints/<id>."
         )
     project, location = parsed
-    print(f"[info] Connected to Vertex AI")
+    
+    # For Vertex AI, we use project/location and rely on Application Default Credentials
+    print(f"[info] Connected to Vertex AI (project: {project}, location: {location})")
     return genai.Client(vertexai=True, project=project, location=location)
 
 

@@ -1,0 +1,312 @@
+{
+  "test_session": {
+    "timestamp": "2025-09-20T13:04:30.663586",
+    "test_type": "rightist_content_test",
+    "agent_type": "rightist",
+    "version": "2.0",
+    "choice_selected": "2",
+    "includes_extracted_content": true,
+    "total_duration_seconds": 35.32447147369385,
+    "total_duration_minutes": 0.5887411912282308
+  },
+  "results": [
+    {
+      "mode": "fast",
+      "description": "Subset rightist + common claims with extracted content",
+      "speed_mode": true,
+      "data": {
+        "total_time": 35.31644797325134,
+        "successful_claims": 8,
+        "total_sources": 16,
+        "errors": [],
+        "claims_with_content": [
+          {
+            "claim_number": 1,
+            "claim_text": "The concept of 'preventable' is often used to scapegoat political leaders for criminal acts.",
+            "claim_type": "rightist",
+            "bias_x": 0.61,
+            "significance_y": 0.87,
+            "sources_found": [
+              {
+                "title": "Ikigai: A Japanese concept to improve work and life",
+                "url": "https://www.bbc.com/worklife/article/20170807-ikigai-a-japanese-concept-to-improve-work-and-life",
+                "snippet": "Aug 7, 2017 ... Ikigai: A Japanese concept to improve work and life ... With no direct English translation, it's a term that embodies the idea of happiness in ...",
+                "display_url": "www.bbc.com",
+                "search_query": "concept site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:35.504210",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "What's the point of concept cars?",
+                "url": "https://www.bbc.com/news/business-45900484",
+                "snippet": "Oct 18, 2018 ... \"A concept car is a development accelerator,\" explains DS design director Thierry Metroz. Its role, he says, is to \"test the new technologies ...",
+                "display_url": "www.bbc.com",
+                "search_query": "concept site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:35.504241",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 3.1054842472076416,
+            "search_time_seconds": 3.105105400085449,
+            "extract_time_seconds": 0.0003674030303955078,
+            "success": true
+          },
+          {
+            "claim_number": 2,
+            "claim_text": "The government cannot be expected to prevent every single crime that occurs.",
+            "claim_type": "rightist",
+            "bias_x": 0.69,
+            "significance_y": 0.86,
+            "sources_found": [
+              {
+                "title": "Israel's most right-wing government agreed under Benjamin ...",
+                "url": "https://www.bbc.com/news/world-middle-east-63942616",
+                "snippet": "Dec 22, 2022 ... Benjamin Netanyahu is backed by an anti-LGBT party and one whose leader was convicted of racism.",
+                "display_url": "www.bbc.com",
+                "search_query": "government site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:38.652883",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Trump says DEI programs are illegal. In the federal government, he's ...",
+                "url": "https://www.npr.org/2025/01/23/nx-s1-5271588/trump-dei-diversity-equity-inclusion-federal-workers-government",
+                "snippet": "Jan 23, 2025 ... For the past four years, the federal government embraced the idea that a more diverse, inclusive workforce would better serve the American ...",
+                "display_url": "www.npr.org",
+                "search_query": "government site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:38.652905",
+                "source": "google_cse",
+                "relevance_score": 1.5
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 3.990708827972412,
+            "search_time_seconds": 3.99033522605896,
+            "extract_time_seconds": 0.00036215782165527344,
+            "success": true
+          },
+          {
+            "claim_number": 3,
+            "claim_text": "We need to strengthen our border security to prevent individuals with criminal intent from entering the country.",
+            "claim_type": "rightist",
+            "bias_x": 0.65,
+            "significance_y": 0.82,
+            "sources_found": [
+              {
+                "title": "Biden administration finalizes rule to strengthen mental health parity ...",
+                "url": "https://www.reuters.com/world/us/biden-administration-finalizes-rule-strengthen-mental-health-parity-law-2024-09-09/",
+                "snippet": "Sep 10, 2024 ... The Biden Administration said on Monday it had finalized a regulation to help ensure that the 175 million Americans with private health ...",
+                "display_url": "www.reuters.com",
+                "search_query": "strengthen site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:42.582725",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Should we drink milk to strengthen bones?",
+                "url": "https://www.bbc.com/future/article/20190408-should-we-drink-milk-to-strengthen-bones",
+                "snippet": "Apr 9, 2019 ... For generations, we've been told milk helps build strong bones. But does science back this up? How many of us were told as children to drink ...",
+                "display_url": "www.bbc.com",
+                "search_query": "strengthen site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:42.582747",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 3.158555507659912,
+            "search_time_seconds": 3.151195526123047,
+            "extract_time_seconds": 0.007349967956542969,
+            "success": true
+          },
+          {
+            "claim_number": 4,
+            "claim_text": "The focus should be on enforcing existing laws to their fullest extent, not on creating new ones.",
+            "claim_type": "rightist",
+            "bias_x": 0.59,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Chris Mason: Trump visit puts focus on pageantry after PM's tough ...",
+                "url": "https://www.bbc.com/news/articles/c80gk8j8epvo",
+                "snippet": "3 days ago ... The government will hope for a reprieve from questions about Peter Mandelson, says the BBC's political editor.",
+                "display_url": "www.bbc.com",
+                "search_query": "focus site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:46.765848",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Five ways science can improve your focus",
+                "url": "https://www.bbc.com/worklife/article/20170925-the-surprising-tricks-to-help-you-focus-at-work",
+                "snippet": "Sep 24, 2017 ... Take your exercise outdoors and get a further boost – spending time in nature has long been suspected to improve people's ability to focus.",
+                "display_url": "www.bbc.com",
+                "search_query": "focus site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:46.765893",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 4.168860197067261,
+            "search_time_seconds": 4.1684229373931885,
+            "extract_time_seconds": 0.00042629241943359375,
+            "success": true
+          },
+          {
+            "claim_number": 5,
+            "claim_text": "The blame lies squarely with the liberal policies that have weakened our borders and made our streets unsafe.",
+            "claim_type": "rightist",
+            "bias_x": 0.73,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Combative Trump blames DEI policies after air tragedy",
+                "url": "https://www.bbc.com/news/articles/cpvmdm1m7m9o",
+                "snippet": "Jan 31, 2025 ... The president started his White House news conference as \"consoler-in-chief\" but then pivoted into unevidenced political blame, ...",
+                "display_url": "www.bbc.com",
+                "search_query": "blame site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:49.923849",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Who is really to blame for climate change?",
+                "url": "https://www.bbc.com/future/article/20200618-climate-change-who-is-to-blame-and-why-does-it-matter",
+                "snippet": "Jun 18, 2020 ... Many groups have been accused of being at blame for this ongoing lack of action, from fossil fuel companies and wealthy countries, to ...",
+                "display_url": "www.bbc.com",
+                "search_query": "blame site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:49.923897",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 3.2912228107452393,
+            "search_time_seconds": 3.2906720638275146,
+            "extract_time_seconds": 0.0005409717559814453,
+            "success": true
+          },
+          {
+            "claim_number": 6,
+            "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+            "claim_type": "common",
+            "bias_x": 0.45,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Shareholders urge UnitedHealth to analyze impact of healthcare ...",
+                "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/shareholders-urge-unitedhealth-analyze-impact-healthcare-denials-2025-01-08/",
+                "snippet": "Jan 10, 2025 ... UnitedHealth Group (UNH.N) shareholders on Wednesday said they requested the company prepare a report on the costs and public health impact related to its ...",
+                "display_url": "www.reuters.com",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:57.816817",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "U.S. prisons mull AI to analyze inmate phone calls | Reuters",
+                "url": "https://www.reuters.com/article/world/us-prisons-mull-ai-to-analyze-inmate-phone-calls-idUSKBN2FA0ON/",
+                "snippet": "Aug 9, 2021 ... WASHINGTON/LOS ANGELES (Thomson Reuters Foundation) -For people like Heather Bollin, a 43-year-old woman in Texas engaged to a man who is ...",
+                "display_url": "www.reuters.com",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:04:57.816855",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 7.732131719589233,
+            "search_time_seconds": 7.730820417404175,
+            "extract_time_seconds": 0.0013022422790527344,
+            "success": true
+          },
+          {
+            "claim_number": 7,
+            "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+            "claim_type": "common",
+            "bias_x": 0.54,
+            "significance_y": 0.75,
+            "sources_found": [
+              {
+                "title": "Dollar stays strong as doubts about Fed rate cuts grow | Reuters",
+                "url": "https://www.reuters.com/markets/currencies/towering-dollar-after-solid-jobs-data-leaves-peers-struggling-2025-01-13/",
+                "snippet": "Jan 13, 2025 ... The dollar rose on Monday, driving its peers to multi-year lows, after Friday's blowout U.S. jobs report underscored economic strength and ...",
+                "display_url": "www.reuters.com",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:05:00.900488",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "More crowded US dollar trade ramps up expectations for euro parity ...",
+                "url": "https://www.reuters.com/markets/currencies/more-crowded-us-dollar-trade-ramps-up-expectations-euro-parity-2025-02-05/",
+                "snippet": "Feb 6, 2025 ... The median survey view was for the euro to hold steady over the coming three and six months at $1.03, and strengthen about 2% in the second ...",
+                "display_url": "www.reuters.com",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:05:00.900550",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 2.9932913780212402,
+            "search_time_seconds": 2.992941379547119,
+            "extract_time_seconds": 0.00033855438232421875,
+            "success": true
+          },
+          {
+            "claim_number": 8,
+            "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+            "claim_type": "common",
+            "bias_x": 0.47,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "France-Turkey tensions mount after NATO naval incident | Reuters",
+                "url": "https://www.reuters.com/article/world/france-turkey-tensions-mount-after-nato-naval-incident-idUSKBN2481II/",
+                "snippet": "Jul 7, 2020 ... For Turkey, it was a misunderstanding. For NATO, it could be a turning point. The incident unfolded quickly in the eastern Mediterranean on June ...",
+                "display_url": "www.reuters.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:05:03.875878",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022",
+                "url": "https://www.bbc.com/news/uk-66798508",
+                "snippet": "Sep 13, 2023 ... The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time. Russia had claimed the incident last ...",
+                "display_url": "www.bbc.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T13:05:03.875889",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [],
+            "processing_time_seconds": 4.003968954086304,
+            "search_time_seconds": 4.002879858016968,
+            "extract_time_seconds": 0.0010797977447509766,
+            "success": true
+          }
+        ],
+        "average_time_per_claim": 4.414555996656418,
+        "success_rate_percent": 100.0,
+        "total_claims_processed": 8,
+        "total_available_claims": 16,
+        "tested_all_claims": false,
+        "rightist_claims_available": 12,
+        "common_claims_available": 4,
+        "rightist_claims_processed": 5,
+        "common_claims_processed": 3,
+        "mode_name": "⚡ RIGHTIST FAST MODE - WITH CONTENT",
+        "speed_mode": true,
+        "total_time_minutes": 0.5886074662208557,
+        "estimated_full_time_minutes": 1.1772149324417114
+      }
+    }
+  ]
+}

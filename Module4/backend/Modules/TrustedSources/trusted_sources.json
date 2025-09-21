@@ -1,0 +1,145 @@
+{
+  "trusted_sources": {
+    "news_outlets": [
+      {
+        "name": "BBC News",
+        "domains": ["bbc.com", "bbc.co.uk"],
+        "credibility_score": 0.95,
+        "bias_rating": "center",
+        "categories": ["news", "analysis", "international"]
+      },
+      {
+        "name": "Reuters",
+        "domains": ["reuters.com"],
+        "credibility_score": 0.96,
+        "bias_rating": "center",
+        "categories": ["news", "business", "international"]
+      },
+      {
+        "name": "Associated Press",
+        "domains": ["apnews.com"],
+        "credibility_score": 0.97,
+        "bias_rating": "center",
+        "categories": ["news", "fact-checking"]
+      },
+      {
+        "name": "NPR",
+        "domains": ["npr.org"],
+        "credibility_score": 0.93,
+        "bias_rating": "center-left",
+        "categories": ["news", "analysis", "culture"]
+      },
+      {
+        "name": "Wall Street Journal",
+        "domains": ["wsj.com"],
+        "credibility_score": 0.92,
+        "bias_rating": "center-right",
+        "categories": ["business", "finance", "news"]
+      }
+    ],
+    "academic_sources": [
+      {
+        "name": "Nature",
+        "domains": ["nature.com"],
+        "credibility_score": 0.98,
+        "bias_rating": "center",
+        "categories": ["science", "research"]
+      },
+      {
+        "name": "Science Magazine",
+        "domains": ["science.org", "sciencemag.org"],
+        "credibility_score": 0.98,
+        "bias_rating": "center",
+        "categories": ["science", "research"]
+      },
+      {
+        "name": "PubMed",
+        "domains": ["pubmed.ncbi.nlm.nih.gov"],
+        "credibility_score": 0.99,
+        "bias_rating": "center",
+        "categories": ["medical", "research"]
+      },
+      {
+        "name": "ArXiv",
+        "domains": ["arxiv.org"],
+        "credibility_score": 0.90,
+        "bias_rating": "center",
+        "categories": ["preprints", "research"]
+      }
+    ],
+    "fact_checkers": [
+      {
+        "name": "Snopes",
+        "domains": ["snopes.com"],
+        "credibility_score": 0.89,
+        "bias_rating": "center",
+        "categories": ["fact-checking", "misinformation"]
+      },
+      {
+        "name": "PolitiFact",
+        "domains": ["politifact.com"],
+        "credibility_score": 0.87,
+        "bias_rating": "center-left",
+        "categories": ["fact-checking", "politics"]
+      },
+      {
+        "name": "FactCheck.org",
+        "domains": ["factcheck.org"],
+        "credibility_score": 0.91,
+        "bias_rating": "center",
+        "categories": ["fact-checking", "politics"]
+      }
+    ],
+    "government_sources": [
+      {
+        "name": "CDC",
+        "domains": ["cdc.gov"],
+        "credibility_score": 0.94,
+        "bias_rating": "center",
+        "categories": ["health", "government"]
+      },
+      {
+        "name": "WHO",
+        "domains": ["who.int"],
+        "credibility_score": 0.93,
+        "bias_rating": "center",
+        "categories": ["health", "international"]
+      },
+      {
+        "name": "FDA",
+        "domains": ["fda.gov"],
+        "credibility_score": 0.92,
+        "bias_rating": "center",
+        "categories": ["health", "regulation"]
+      }
+    ]
+  },
+  "search_patterns": {
+    "general": [
+      "{topic} research study",
+      "{topic} analysis report",
+      "{topic} expert opinion",
+      "{topic} recent developments"
+    ],
+    "fact_checking": [
+      "{topic} fact check",
+      "{topic} myth debunked",
+      "{topic} misinformation",
+      "{topic} verification"
+    ],
+    "academic": [
+      "{topic} peer reviewed",
+      "{topic} academic study",
+      "{topic} research paper",
+      "{topic} scientific evidence"
+    ]
+  },
+  "exclusion_patterns": [
+    "social media posts",
+    "blog comments",
+    "forum discussions",
+    "opinion polls without methodology",
+    "advertisements",
+    "sponsored content"
+  ]
+}

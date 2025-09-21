@@ -1,0 +1,522 @@
+{
+  "test_session": {
+    "timestamp": "2025-09-20T12:29:19.860974",
+    "test_type": "enhanced_content_test",
+    "version": "2.0",
+    "choice_selected": "2",
+    "includes_extracted_content": true,
+    "total_duration_seconds": 249.86817955970764,
+    "total_duration_minutes": 4.164469659328461
+  },
+  "results": [
+    {
+      "mode": "fast",
+      "description": "Subset claims with extracted content",
+      "speed_mode": true,
+      "data": {
+        "total_time": 249.8531050682068,
+        "successful_claims": 8,
+        "total_sources": 16,
+        "errors": [],
+        "claims_with_content": [
+          {
+            "claim_number": 1,
+            "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+            "claim_type": "leftist",
+            "bias_x": 0.0,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Search results for '\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=this+is+a",
+                "snippet": "Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:22.074362",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=this+is+a",
+                "snippet": "Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:22.074376",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+                "claim_bias_x": 0.0,
+                "claim_significance_y": 0.8,
+                "source_url": "https://bbc.com/search?q=this+is+a",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "This is a video 1 Sep 2025 Is this really a good idea for a kid's party? Elis is worried that John's idea will show him up. 8 days ago 'It's been a bleak couple of years, this is like a gold to me' - Wightman on 1500m silver Great Britain's Jake Wightman reacts to his silver medal in the men's 1500m at the World Athletics Championships in Tokyo. 3 days ago Best of Nolan School slammed for giving their top GCSE students a special blazer - is this snobbery? Or a recognition of achievement? Also, are enough dog attacks being successfully prosecuted? 25 Aug 2025 Is this Little Mix member planning a new tour? Leigh-Anne Pinnock joins the One Show team to discuss her new song Been a Minute. 5 Aug 2025 This quick dumpling salad is trending for a reason A crunchy and satisfying salad of fried dumplings and an Asian slaw tossed in a ginger, honey and sriracha dressing. 5 Aug 2025 This is a video 29 Jul 2025 This is a video 29 Jul 2025 Is this a 'bendy bus'? Metro mayor disagrees Trials begin for the new \"rapid transit vehicles\" sparking a debate about what to call them. 2 Aug 2025 1 2 3 4 5 ... 1112",
+                "snippet": "Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:29:31.174825",
+                "content_id": "23d67a673e9ad9ec06cab4137006b2af"
+              },
+              {
+                "claim_text": "This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.",
+                "claim_bias_x": 0.0,
+                "claim_significance_y": 0.8,
+                "source_url": "https://reuters.com/search?q=this+is+a",
+                "source_title": "Search results for '\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "source_domain": "reuters.com",
+                "content": "\n        Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\"\n        \n        Source: reuters.com\n        Context: Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"This is a direct result of the xenophobic rhetoric and policies promoted by the ...\"",
+                "search_query": "\"This is a direct result of the xenophobic rhetoric and policies promoted by the Trump administration.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:29:34.800882",
+                "content_id": "f8b4f4dec7db152d42974b9db40ea846",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 16.740997552871704,
+            "search_time_seconds": 2.514287233352661,
+            "extract_time_seconds": 14.226660966873169,
+            "success": true
+          },
+          {
+            "claim_number": 2,
+            "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+            "claim_type": "leftist",
+            "bias_x": 0.07,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Search results for '\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=the+trump+administration's",
+                "snippet": "Content related to: \"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:38.778852",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=the+trump+administration's",
+                "snippet": "Content related to: \"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:38.778881",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+                "claim_bias_x": 0.07,
+                "claim_significance_y": 0.8,
+                "source_url": "https://bbc.com/search?q=the+trump+administration's",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "Supreme Court to decide if Trump's global tariffs are legal It will amount to the biggest test of Trump's presidential authority and his signature economic policy. 10 Sep 2025 Kash Patel's combative Senate hearing: key takeaways Patel shrugged off any criticism of his handling of the bureau and clashed with Democratic lawmakers. 3 days ago Judge rules ending protections for Venezuelan and Haitian migrants is unlawful The decision is in response to the Trump administration's efforts to end temporary protected status (TPS). 6 Sep 2025 Analysis: Will the US tech bromance turn around the UK economy? In the week the UK hosted Donald Trump for a second state visit, the country also rolled out the red carpet for US tech firms. 8 hrs ago Trump and sons' stake in crypto firm worth $5bn World Liberty Financial, launched by the Trumps during the presidential campaign, begins trading. 2 Sep 2025 Brendan Carr's emboldened FCC takes on Trump's media foes But it is unclear to what extent media companies might push back - at the potential expense of their bottom line. 1 day ago US revokes visas of Indian executives over alleged fentanyl trafficking The US embassy said “these individuals and close family members may be ineligible for travel” to the US. 1 day ago Judge overturns Trump administration funding cuts to Harvard A court rules the Ivy League college's free speech rights were violated, but the White House vows to appeal. 4 Sep 2025 Larry Ellison briefly becomes world's richest person The Oracle cofounder's wealth temporarily overtook Musk's fortune, propelled by an AI boom. 11 Sep 2025 1 2 3 4 5 ... 201",
+                "snippet": "Content related to: \"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:29:49.353554",
+                "content_id": "2fa610d6e2953aa8a7a4b4edbdf957a5"
+              },
+              {
+                "claim_text": "The Trump administration's rhetoric created a climate where such violence is more likely.",
+                "claim_bias_x": 0.07,
+                "claim_significance_y": 0.8,
+                "source_url": "https://reuters.com/search?q=the+trump+administration's",
+                "source_title": "Search results for '\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "source_domain": "reuters.com",
+                "content": "\n        Content related to: \"The Trump administration's rhetoric created a climate where such violence is more likely.\"\n        \n        Source: reuters.com\n        Context: Content related to: \"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"The Trump administration's rhetoric created a climate where such violence is mor...\"",
+                "search_query": "\"The Trump administration's rhetoric created a climate where such violence is more likely.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:29:53.049539",
+                "content_id": "f9ed8317c247171c963791284ee20e14",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 18.45868229866028,
+            "search_time_seconds": 2.445110559463501,
+            "extract_time_seconds": 16.0135338306427,
+            "success": true
+          },
+          {
+            "claim_number": 3,
+            "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+            "claim_type": "leftist",
+            "bias_x": 0.3,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Search results for '\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=a+thorough+investigation",
+                "snippet": "Content related to: \"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:57.422821",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=a+thorough+investigation",
+                "snippet": "Content related to: \"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:29:57.422860",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+                "claim_bias_x": 0.3,
+                "claim_significance_y": 0.8,
+                "source_url": "https://bbc.com/search?q=a+thorough+investigation",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "Inquiries dropped into ex-MP accused of misusing donors' money There were claims former MP Mark Menzies used the money to pay what he called \"bad people\". 4 days ago Nestle fires boss after romantic relationship with employee The food giant says Laurent Freixe had an \"undisclosed\" relationship with \"a direct subordinate\". 3 Sep 2025 'A bullet went through my skull': Tanzania abduction survivor Activist Edgar Mwakabela describes his ordeal after he says he was kidnapped and shot by suspected state agents. 3 Sep 2025 Further investigation needed at park sinkhole A sinkhole opened up in December 2024 and more investigation work is needed before it is fixed. 10 Sep 2025 FA will not appeal against Paqueta decision The Football Association will not appeal against the decision to clear West Ham midfielder Lucas Paqueta of four spot-fixing charges. 3 Sep 2025 Man dies and several injured in two M5 crashes Part of the M5 in Devon was closed in both directions following two serious collisions. 17 hrs ago Madeleine McCann suspect refuses Met Police interview Christian Brückner is due to be released from prison in Germany on a separate offence this week. 5 days ago Suspended London Pride boss ordered to hand back bank accounts Christopher Joell-Deshields was suspended earlier this month after financial misconduct allegations. 7 days ago How Syria's dictatorship used a global child welfare charity to 'disappear' children The Assad regime used an international charity to hide children of detainees from their families. 11 Sep 2025 1 2 3 4 5 ... 1112",
+                "snippet": "Content related to: \"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:07.897303",
+                "content_id": "e79271e8921a30ac4871ddfeaa5c1eae"
+              },
+              {
+                "claim_text": "A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.",
+                "claim_bias_x": 0.3,
+                "claim_significance_y": 0.8,
+                "source_url": "https://reuters.com/search?q=a+thorough+investigation",
+                "source_title": "Search results for '\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "source_domain": "reuters.com",
+                "content": "\n        Content related to: \"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\"\n        \n        Source: reuters.com\n        Context: Content related to: \"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"A thorough investigation is needed to determine if there were any systemic failu...\"",
+                "search_query": "\"A thorough investigation is needed to determine if there were any systemic failures that could have prevented this.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:11.930981",
+                "content_id": "94faff6aac0f7e54a6a9433724902ade",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 18.644114017486572,
+            "search_time_seconds": 3.2795140743255615,
+            "extract_time_seconds": 15.36457872390747,
+            "success": true
+          },
+          {
+            "claim_number": 4,
+            "claim_text": "This wasn't a random act; it was a product of a system that devalues non-white lives.",
+            "claim_type": "leftist",
+            "bias_x": 0.02,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "Search results for '\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=this+wasn't+a",
+                "snippet": "Content related to: \"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:30:16.031617",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=this+wasn't+a",
+                "snippet": "Content related to: \"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:30:16.031653",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This wasn't a random act; it was a product of a system that devalues non-white lives.",
+                "claim_bias_x": 0.02,
+                "claim_significance_y": 0.7,
+                "source_url": "https://bbc.com/search?q=this+wasn't+a",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "Scheffler's sub-70 streak ends as Hughes leads Scottie Scheffler's streak of 21 sub-70 scores is over after he finishes the opening round of the Procore Championship seven shots behind leader Mackenzie Hughes. 12 Sep 2025 GPs 'angry, disappointed and disrespected' by imposed contract There are concerns the continued \"stalemate\" between GPs and the Department of Health is damaging patient care. 10 Sep 2025 Ireland will want to prove win over New Zealand 'wasn't a one-off' Former Ireland captain and BBC Sport columnist Nichola Fryday says Ireland's win over New Zealand last year should give them belief that they can beat the defending world champions again. 6 Sep 2025 Adoptive parents 'angry' at lack of support over delayed law change A delay in a law aimed at better supporting parents of adoptive children has left families feeling let down. 11 Sep 2025 Football Manager 25 would have damaged us forever, says maker Sports Interactive boss Miles Jacobson reveals the reasons for cancelling FM25, and what fans can expect from the new game. 29 Aug 2025 Returning in quarter-final a huge ask for Wafer Former Ireland captain and BBC Sport columnist Nichola Fryday says the first 20 minutes of Sunday's quarter-final against France will probably feel like the hardest game Aoife Wafer has ever played. 7 days ago McNamee's Packers return 'all went to plan' Mark McNamee says he has \"everything to prove\" despite being re-signed to the Green Bay Packers practice squad. 29 Aug 2025 Derelict dance venue building could reopen Graham Plant hopes the building could reopen its doors in 2028 following proposals from six bidders. 10 Sep 2025 India's International Booker winner at the centre of a political row Banu Mushtaq has become the subject of a controversy after she was invited to inaugurate a prominent festival in Karnataka. 29 Aug 2025 1 2 3 4 5 ... 1112",
+                "snippet": "Content related to: \"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:26.273555",
+                "content_id": "19550c02f62535b7faad8332a68fc273"
+              },
+              {
+                "claim_text": "This wasn't a random act; it was a product of a system that devalues non-white lives.",
+                "claim_bias_x": 0.02,
+                "claim_significance_y": 0.7,
+                "source_url": "https://reuters.com/search?q=this+wasn't+a",
+                "source_title": "We can't find that page",
+                "source_domain": "reuters.com",
+                "content": "We can't find that page The page may have moved, or the address may have been entered incorrectly. Try using the navigation to find stories of interest, or browse our latest stories. Go to the Reuters.com Homepage",
+                "snippet": "Content related to: \"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"This wasn't a random act; it was a product of a system that devalues non-white lives.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:30.644867",
+                "content_id": "dac586b100a30e21fd916b34f98c75eb"
+              }
+            ],
+            "processing_time_seconds": 19.37973189353943,
+            "search_time_seconds": 3.0978047847747803,
+            "extract_time_seconds": 16.281869888305664,
+            "success": true
+          },
+          {
+            "claim_number": 5,
+            "claim_text": "The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.",
+            "claim_type": "leftist",
+            "bias_x": 0.05,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "Search results for '\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on BBC News",
+                "url": "https://bbc.com/search?q=the+'law+and",
+                "snippet": "Content related to: \"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "bbc.com",
+                "search_query": "\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:30:35.401466",
+                "source": "fallback_trusted"
+              },
+              {
+                "title": "Search results for '\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com' on Reuters",
+                "url": "https://reuters.com/search?q=the+'law+and",
+                "snippet": "Content related to: \"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "display_url": "reuters.com",
+                "search_query": "\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "found_at": "2025-09-20T12:30:35.401504",
+                "source": "fallback_trusted"
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.",
+                "claim_bias_x": 0.05,
+                "claim_significance_y": 0.7,
+                "source_url": "https://bbc.com/search?q=the+'law+and",
+                "source_title": "BBC",
+                "source_domain": "bbc.com",
+                "content": "The Explanation The President’s Path: Trump’s law and order Trump’s decision to deploy the National Guard draws equal parts praise and concern 29 Aug 2025 'Justice shouldn't have expiry,' says victim's sister Emily Luccarini wants a change to the law that has seen a hit-and-run suspect evade prosecution. 1 day ago Assisted dying bill to be debated in House of Lords Opponents of the proposed law for England and Wales say there should be further scrutiny before peers discuss the issue. 12 Sep 2025 CCTV captures Israeli attack on Hamas leaders in Doha Qatar, which has mediated indirect negotiations between Israel and Hamas, calls the attack a \"blatant violation\" of international law. 9 Sep 2025 Hillsborough Law will include duty of candour The proposed law would force public bodies to co-operate with investigations into major disasters. 4 days ago South African court rules that men can take wife's surname The highest court rules that a law barring men from taking the surnames of their wives is a \"colonial import\". 11 Sep 2025 Defender Law signs new Truro City contract Truro City defender Ryan Law signs a new 'multi-year' contract with the National League side. 8 Sep 2025 India's top court suspends parts of contentious Muslim property law The court refused to strike down the entire law saying \"the grant of stay is only in the rarest of rare category\". 5 days ago Guernsey domestic abuse law ahead of UK - police The new legislation, which was introduced in June, has been used to protect 17 islanders so far. 5 days ago 1 2 3 4 5 ... 1112",
+                "snippet": "Content related to: \"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:43.977499",
+                "content_id": "b6dc29a80e1829bd8de1aeb19a50feac"
+              },
+              {
+                "claim_text": "The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.",
+                "claim_bias_x": 0.05,
+                "claim_significance_y": 0.7,
+                "source_url": "https://reuters.com/search?q=the+'law+and",
+                "source_title": "We can't find that page",
+                "source_domain": "reuters.com",
+                "content": "We can't find that page The page may have moved, or the address may have been entered incorrectly. Try using the navigation to find stories of interest, or browse our latest stories. Go to the Reuters.com Homepage",
+                "snippet": "Content related to: \"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "search_query": "\"The 'law and order' rhetoric is a smokescreen for a white supremacist agenda.\" site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org OR site:nature.com",
+                "extracted_at": "2025-09-20T12:30:49.553787",
+                "content_id": "ed5cba9b7bd681425d68e07cc117019a"
+              }
+            ],
+            "processing_time_seconds": 18.318546295166016,
+            "search_time_seconds": 2.794691801071167,
+            "extract_time_seconds": 15.523827075958252,
+            "success": true
+          },
+          {
+            "claim_number": 6,
+            "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+            "claim_type": "common",
+            "bias_x": 0.45,
+            "significance_y": 0.8,
+            "sources_found": [
+              {
+                "title": "Shareholders urge UnitedHealth to analyze impact of healthcare ...",
+                "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/shareholders-urge-unitedhealth-analyze-impact-healthcare-denials-2025-01-08/",
+                "snippet": "Jan 10, 2025 ... UnitedHealth Group (UNH.N) shareholders on Wednesday said they requested the company prepare a report on the costs and public health impact related to its ...",
+                "display_url": "www.reuters.com",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:30:55.110525",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "U.S. prisons mull AI to analyze inmate phone calls | Reuters",
+                "url": "https://www.reuters.com/article/world/us-prisons-mull-ai-to-analyze-inmate-phone-calls-idUSKBN2FA0ON/",
+                "snippet": "Aug 9, 2021 ... WASHINGTON/LOS ANGELES (Thomson Reuters Foundation) -For people like Heather Bollin, a 43-year-old woman in Texas engaged to a man who is ...",
+                "display_url": "www.reuters.com",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:30:55.110590",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+                "claim_bias_x": 0.45,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/shareholders-urge-unitedhealth-analyze-impact-healthcare-denials-2025-01-08/",
+                "source_title": "Shareholders urge UnitedHealth to analyze impact of healthcare denials | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "Shareholders urge UnitedHealth to analyze impact of healthcare denials By Amina Niasse and Ross Kerber January 10, 2025 4:12 AM GMT+5:30 Updated January 10, 2025 Text Small Text Medium Text Large Text Share X Facebook Linkedin Email Link UnitedHealth Group's headquarters building is seen in Minnetonka, Minnesota, U.S. in this handout picture taken in 2019. UnitedHealth Group/Handout via REUTERS/File Photo Purchase Licensing Rights , opens new tab Companies UnitedHealth Group Inc Follow Cigna Group Follow Reabold Requisitioning Shareholder Group Follow NEW YORK / BOSTON, Jan 8 (Reuters) - UnitedHealth Group (UNH.N) , opens new tab shareholders on Wednesday said they requested the company prepare a report on the costs and public health impact related to its \"practices that limit or delay access to healthcare.\" If the proposal makes it to a vote at the company's annual meeting it would raise a charged topic after a senior executive was gunned down in Manhattan last month. Keep up with the latest medical breakthroughs and healthcare trends with the Reuters Health Rounds newsletter. Sign up here. A spokesperson for UnitedHealth said the company will respond to shareholder proposals for its 2025 proxy statement once it files the document that serves as an agenda for its annual meeting, which has not yet been scheduled. In recent years, the company has issued its proxy in April ahead of a June annual meeting.  · Scroll to continue Those who filed the resolution include religious groups led by the Sisters of the Holy Names of Jesus and Mary of Quebec, and Trillium Asset Management. The group proposed an analysis of how prior authorization, or approval required by an insurer before a patient can receive medical care, and denials of medical services lead patients to forgo treatment. “The pattern of delays and denials of necessary medical care by UnitedHealth and other insurance companies harms more than just the patient themselves,” Wendell Potter, president of the Center for Health & Democracy and a former Cigna (CI.N) , opens new tab executive, said in a statement sent in support of the resolution by the Interfaith Center on Corporate Responsibility.  · Scroll to continue UnitedHealth runs the country's largest health insurer, UnitedHealthcare, as well as pharmacy benefit manager Optum and medical practices. The killing of UnitedHealthcare CEO Brian Thompson in December galvanized criticism of U.S. health insurers, with swarms of patients describing delayed or denied care and accusing companies of using deceptive practices. Luigi Mangione, 26, who was accused of killing Thompson, pleaded not guilty in a New York court in December after receiving thousands of dollars in public donations shortly after his arrest. In a December statement, UnitedHealth said it approves and pays for an average of 90% of medical claims submitted. \"Highly inaccurate and grossly misleading information has been circulated about our company’s treatment of insurance claims,\" UnitedHealth said. Ad Break Coming Up NEXT Stay Next Off English 180p 288p 360p 480p 540p 576p 720p HD 1080p HD Auto (180p) About Connatix V2049621718 About Connatix V2049621718 1/1 Skip Ad Continue watching after the ad Visit Advertiser website GO TO PAGE UnitedHealth CEO Andrew Witty in a message to employees described Thompson as \"one of the good guys,\" adding the company would continue to service the most vulnerable Americans. Reporting by Amina Niasse in New York and Ross Kerber in Boston; editing by Caroline Humer and Bill Berkrot Our Standards: The Thomson Reuters Trust Principles. , opens new tab Suggested Topics: Sustainable Finance & Reporting ESG Investors Social Impact Shareholder Activism Healthcare Providers Share X Facebook Linkedin Email Link Purchase Licensing Rights Ross Kerber Thomson Reuters Ross Kerber is U.S. Sustainable Business Correspondent for Reuters News, a beat he created to cover investors’ growing concern for environmental, social and governance (ESG) issues, and the response from executives and policymakers. Ross joined Reuters in 2009 after a decade at The Boston Globe and has written on topics including proxy voting by the largest asset managers, the corporate response to social movements like Black Lives Matter, and the backlash to ESG efforts by conservatives. He writes the weekly Reuters Sustainable Finance Newsletter. Email X Linkedin Read Next World at Work category Striking Boeing Defense workers approve union's proposed contract that company rejected Business category Trump to impose $100,000 fee per year for H-1B visas, in blow to tech World at Work category GE Aerospace reaches five-year labor deal with 600 striking UAW workers ANALYSIS BlackRock, Vanguard scale back company talks as new guidance bites Litigation category CFPB considers worker furloughs as funding crunch deepens, sources say Climate & Energy category Salzgitter delays later stages of green steel project due to economic and regulatory conditions",
+                "snippet": "Jan 10, 2025 ... UnitedHealth Group (UNH.N) shareholders on Wednesday said they requested the company prepare a report on the costs and public health impact related to its ...",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:31:44.324906",
+                "content_id": "20d3a557e845cd94241db098341fa3ba"
+              },
+              {
+                "claim_text": "We need to analyze the specific circumstances to understand what preventative measures might have been effective.",
+                "claim_bias_x": 0.45,
+                "claim_significance_y": 0.8,
+                "source_url": "https://www.reuters.com/article/world/us-prisons-mull-ai-to-analyze-inmate-phone-calls-idUSKBN2FA0ON/",
+                "source_title": "U.S. prisons mull AI to analyze inmate phone calls | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "U.S. prisons mull AI to analyze inmate phone calls By David Sherfinski and Avi Asher-Schapiro August 11, 2021 1:26 AM GMT+5:30 Updated August 9, 2021 Text Small Text Medium Text Large Text Share X Facebook Linkedin Email Link WASHINGTON/LOS ANGELES (Thomson Reuters Foundation) -For people like Heather Bollin, a 43-year-old woman in Texas engaged to a man who is currently incarcerated, constant surveillance is a fact of life: the three daily phone calls they have together are subject to monitoring by prison officials. \"We are never able to communicate without being under surveillance,\" she told the Thomson Reuters Foundation in a phone interview, asking that the prison her fiance is in remain anonymous because she fears retaliation.  · Scroll to continue Report This Ad Prisons in the United States could get more high-tech help keeping tabs on what inmates are saying, after a key House of Representatives panel pressed for a report to study the use of artificial intelligence (AI) to analyze prisoners' phone calls. But prisoners' advocates and inmates' families say relying on AI to interpret communications opens up the system to mistakes, misunderstandings and racial bias. The call for the Department of Justice (DOJ) to further explore the technology, to help prevent violent crime and suicide, accompanies an $81 billion-plus spending bill to fund the DOJ and other federal agencies in 2022 that the Appropriations Committee passed last month.  · Scroll to continue The technology can automatically transcribe inmates' phone calls, analyzing their patterns of communication and flagging certain words or phrases, including slang, that officials pre-program into the system. A House Democratic aide said in an emailed statement they were encouraging the DOJ \"to engage with stakeholders in the course of examining the feasibility of utilizing such a system.\" Several state and local facilities across the country have already started using the tech, including in Alabama, Georgia and New York. The House panel wants the DOJ to look into potentially leveraging the technology for federal use and to identify gaps or shortcomings in the information it produces. \"It's very unsettling - what if I say something wrong on a call?\" said Bollin, who worries about accidentally getting her fiance in trouble. \"It could be misconstrued by this technology, and then he could be punished?\" Ad Break Coming Up NEXT Stay Next Off English 180p 288p 360p 480p 540p 576p 720p HD 1080p HD Auto (180p) About Connatix V2049621718 About Connatix V2049621718 1/1 Skip Ad Continue watching after the ad Visit Advertiser website GO TO PAGE 'SUBJECTS OF EXPERIMENTATION' Privacy groups say the technology could amplify racial bias in the justice system and unfairly subject prisoners to unaccountable artificial intelligence. \"This Congress should be outlawing racist policing tech - it shouldn't be funding it,\" said Albert Fox Cahn, executive director of the Surveillance Technology Oversight Project (STOP), an advocacy group based in New York. \"People who have been caught up in the criminal justice system are always turned into the subjects of experimentation for new technology systems.\" Proponents dispute such criticisms, saying the tech is a vital time-saving tool for law enforcement and does not target specific groups. Bill Partridge, chief of police in Oxford, Alabama, said local forces have managed to solve cold case homicides after prisoners were flagged on the phone talking about \"actually committing the murder.\" Partridge's department is one of a handful of agencies in the state that have utilized software from LEO Technologies, a California-based company, that uses Amazon Web Services (AWS) natural language processing and transcription tools to process and flag inmate calls for near real-time analysis. The police chief said the technology, called Verus, is particularly helpful in preventing suicides. \"I think if the federal government starts using it, they're going to prevent a lot of inmate deaths,\" he said. Scott Kernan, CEO of LEO Technologies and a former Secretary of the California Department of Corrections and Rehabilitation, said the technology is \"saving lives both inside and outside of the correctional environments we monitor\". \"Because we listen to all communications, we do not target a race, gender or protected group,\" Kernan said. Specific public data on the number of calls Verus has flagged was not readily available. OVERSIGHT, PRIVACY CONCERNS Incarcerated people have very few legal protections on the inside to fight back if a machine determines they are about to step out of line, said Bianca Tylek, founder of Worth Rises, a nonprofit working on prison justice issues. \"I think the idea that a machine can hear and understand what a person is saying, and that becomes some kind of tool in court, is ridiculous,\" she said. Technology that transcribes voice conversations is flawed and has a particularly high error rate when applied to the voices of Black people, according to a 2020 paper on the five leading systems by researchers at Stanford University and Georgetown University. \"Speech-to-text technology is not in a place where it can be used to make these kinds of criminal justice decisions,\" said Allison Koenecke, the lead author of the study. The researchers found that Amazon's automatic speech recognition software had an error rate for Black speakers that was nearly twice as high as for white speakers. In a statement, an AWS spokesperson said the company's Amazon Transcribe service is \"highly accurate\" but acknowledged that heavy accents or poor audio quality can lead to variations in individual words. They said the service \"has never received any reports of abuse or misuse,\" that it is inappropriate to chalk up variations to a \"single category\" like race, and that they are working to identify potential areas to make improvements. Black men are six times more likely to be behind bars than white men in the United States, according to the Sentencing Project, a research group. Kentrell Owens, a computer scientist at the University of Washington who studies prison surveillance, said proper oversight of the AI systems is critical. \"Before you implement tech that can control people's freedom, you need an independent assessment and audit of the tool to determine if the tech even helps you achieve your goals,\" he said. AUTOMATE RACIAL PROFILING? Advocates say the AI technology the spending bill report refers to expands upon current prison surveillance technology, built by companies like Securus Technologies - a major provider of prisoner phone call services. In a 2020 STOP report, Cahn looked at the Securus platform, which uses automated voice recognition technology to log and analyze conversations for the New York State Department of Corrections and Community Supervision (DOCCS). He said the software violated the privacy rights of prisoners and their families, and had the potential to \"automate racial profiling\". The DOCCS said in a statement that they take the safety and security of staff, visitors and inmates \"very seriously\" and that they utilize many tools in addition to the Securus software to accomplish their goals. A spokesperson for Securus did not answer questions about Cahn's report and potential bias, but said the company did not lobby to get the AI language into the House bill report. For people like Bollin, the congressional initiative raises the specter of having to forfeit even more of her privacy to continue talking with her fiance. \"We are supposed to be free people, we are not incarcerated,\" she said. \"But it feels like my rights are constantly being violated.\" Reporting by David Sherfinski and Avi Asher-Schapiro. Editing by Jumana Farouky and Zoe Tabary. Please credit the Thomson Reuters Foundation, the charitable arm of Thomson Reuters, that covers the lives of people around the world who struggle to live freely or fairly. Visit <a href=\"http://news.trust.org\">news.trust.org</a> Our Standards: The Thomson Reuters Trust Principles. , opens new tab Suggested Topics: World Share X Facebook Linkedin Email Link Purchase Licensing Rights Read Next Russian jets enter Estonia's airspace in latest test for NATO Business category Trump to impose $100,000 fee per year for H-1B visas, in blow to tech Middle East category Israel presses ahead with Gaza City assault, displaced Palestinians panic China category Trump and Xi make progress on TikTok deal, plan to meet in South Korea World category Zelenskiy says Ukrainian forces inflict heavy losses on Russia in counteroffensive Americas category Trump says US struck alleged drug vessel in latest operation",
+                "snippet": "Aug 9, 2021 ... WASHINGTON/LOS ANGELES (Thomson Reuters Foundation) -For people like Heather Bollin, a 43-year-old woman in Texas engaged to a man who is ...",
+                "search_query": "analyze site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:32:28.325925",
+                "content_id": "719a9feac0f3797fc69842a38d1790dc"
+              }
+            ],
+            "processing_time_seconds": 99.1633517742157,
+            "search_time_seconds": 3.5375256538391113,
+            "extract_time_seconds": 95.62578296661377,
+            "success": true
+          },
+          {
+            "claim_number": 7,
+            "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+            "claim_type": "common",
+            "bias_x": 0.54,
+            "significance_y": 0.75,
+            "sources_found": [
+              {
+                "title": "Dollar stays strong as doubts about Fed rate cuts grow | Reuters",
+                "url": "https://www.reuters.com/markets/currencies/towering-dollar-after-solid-jobs-data-leaves-peers-struggling-2025-01-13/",
+                "snippet": "Jan 13, 2025 ... The dollar rose on Monday, driving its peers to multi-year lows, after Friday's blowout U.S. jobs report underscored economic strength and ...",
+                "display_url": "www.reuters.com",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:32:35.016032",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "More crowded US dollar trade ramps up expectations for euro parity ...",
+                "url": "https://www.reuters.com/markets/currencies/more-crowded-us-dollar-trade-ramps-up-expectations-euro-parity-2025-02-05/",
+                "snippet": "Feb 6, 2025 ... The median survey view was for the euro to hold steady over the coming three and six months at $1.03, and strengthen about 2% in the second ...",
+                "display_url": "www.reuters.com",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:32:35.016170",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+                "claim_bias_x": 0.54,
+                "claim_significance_y": 0.75,
+                "source_url": "https://www.reuters.com/markets/currencies/towering-dollar-after-solid-jobs-data-leaves-peers-struggling-2025-01-13/",
+                "source_title": "Dollar stays strong as doubts about Fed rate cuts grow | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\"\n        \n        Source: www.reuters.com\n        Context: Jan 13, 2025 ... The dollar rose on Monday, driving its peers to multi-year lows, after Friday's blowout U.S. jobs report underscored economic strength and ...\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less ...\"",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:32:42.159945",
+                "content_id": "bf65ba45d6a00ea5df8e5cdd3639ad65",
+                "content_type": "fast_template_fallback"
+              },
+              {
+                "claim_text": "Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.",
+                "claim_bias_x": 0.54,
+                "claim_significance_y": 0.75,
+                "source_url": "https://www.reuters.com/markets/currencies/more-crowded-us-dollar-trade-ramps-up-expectations-euro-parity-2025-02-05/",
+                "source_title": "More crowded US dollar trade ramps up expectations for euro parity ...",
+                "source_domain": "www.reuters.com",
+                "content": "\n        Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less preventable.\"\n        \n        Source: www.reuters.com\n        Context: Feb 6, 2025 ... The median survey view was for the euro to hold steady over the coming three and six months at $1.03, and strengthen about 2% in the second ...\n        \n        This article discusses the topic mentioned in the claim, providing relevant context and analysis \n        from the perspective of www.reuters.com, a trusted news source.\n        ",
+                "snippet": "Content related to: \"Strengthening hate crime laws might serve as a deterrent, making such acts less ...\"",
+                "search_query": "strengthening site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:32:43.623558",
+                "content_id": "b0311e924343db0a0163b37c29caa1e1",
+                "content_type": "fast_template_fallback"
+              }
+            ],
+            "processing_time_seconds": 14.570571184158325,
+            "search_time_seconds": 4.2537925243377686,
+            "extract_time_seconds": 10.316710233688354,
+            "success": true
+          },
+          {
+            "claim_number": 8,
+            "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+            "claim_type": "common",
+            "bias_x": 0.47,
+            "significance_y": 0.7,
+            "sources_found": [
+              {
+                "title": "France-Turkey tensions mount after NATO naval incident | Reuters",
+                "url": "https://www.reuters.com/article/world/france-turkey-tensions-mount-after-nato-naval-incident-idUSKBN2481II/",
+                "snippet": "Jul 7, 2020 ... PARIS/BRUSSELS (Reuters) - For France, it was the final straw. For Turkey, it was a misunderstanding. For NATO, it could be a turning point.",
+                "display_url": "www.reuters.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:32:48.912616",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              },
+              {
+                "title": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022",
+                "url": "https://www.bbc.com/news/uk-66798508",
+                "snippet": "Sep 13, 2023 ... The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time. Russia had claimed the incident last ...",
+                "display_url": "www.bbc.com",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "found_at": "2025-09-20T12:32:48.912630",
+                "source": "google_cse",
+                "relevance_score": 2.0
+              }
+            ],
+            "extracted_content": [
+              {
+                "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+                "claim_bias_x": 0.47,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.reuters.com/article/world/france-turkey-tensions-mount-after-nato-naval-incident-idUSKBN2481II/",
+                "source_title": "France-Turkey tensions mount after NATO naval incident | Reuters",
+                "source_domain": "www.reuters.com",
+                "content": "France-Turkey tensions mount after NATO naval incident By John Irish and Robin Emmott July 7, 2020 7:46 PM GMT+5:30 Updated July 7, 2020 Text Small Text Medium Text Large Text Share X Facebook Linkedin Email Link Item 1 of 3 FILE PHOTO: A helicopter flies near the British Royal navy vessel Echo, during a practical demonstration of boarding a \"suspect\" ship during the NATO Operation Sea Guardian in the Mediterranean Sea, off the coast of Taranto, Italy September 20, 2018. REUTERS/Alessandro Bianchi/File Photo [1/3] FILE PHOTO: A helicopter flies near the British Royal navy vessel Echo, during a practical demonstration of boarding a \"suspect\" ship during the NATO Operation Sea Guardian in the Mediterranean Sea, off the coast of Taranto, Italy September 20, 2018. REUTERS/Alessandro Bianchi/File Photo Purchase Licensing Rights , opens new tab PARIS/BRUSSELS (Reuters) - For France, it was the final straw. For Turkey, it was a misunderstanding. For NATO, it could be a turning point. The incident unfolded quickly in the eastern Mediterranean on June 10, when a French frigate under NATO command tried to inspect a Tanzanian-flagged cargo ship suspected of smuggling arms to Libya in violation of a U.N. embargo. The French armed forces ministry, speaking on behalf of the government, said the frigate was harassed by three Turkish navy vessels escorting the cargo ship. A Turkish ship flashed its radar lights and its crew put on bulletproof vests and stood behind their light weapons, it said.  · Scroll to continue Turkey disputes this. It denies trafficking arms to Libya and says the cargo ship, the Cirkin, was carrying humanitarian aid. It has accused the French navy of aggression. Turkey's ambassador to France, Ismail Hakkı Musa, said on July 1 the three Turkish warships were helping NATO enforce the U.N. arms embargo. NATO ordered an investigation, but its contents are classified and NATO has not commented on its outcome. Two European diplomats told Reuters that France sent a letter to NATO Secretary-General Jens Stoltenberg in early July saying the report did not \"correctly establish the facts.\" The U.S. Pentagon declined to comment on the incident.  · Scroll to continue For France, the incident highlights what many NATO allies see as President Tayyip Erdogan's tendency to act against the Western alliance's interests and values. FRACTURES After a series of disagreements, from Turkey's purchase of weapons from Russia to gas drilling operations near Cyprus, France concluded that suspicions of Turkish arms smuggling to Libya were too serious to ignore, four NATO diplomats and officials told Reuters. France has suspended its participation in NATO's Mediterranean mission, Sea Guardian, instead offering its assets to a European Union mission that is upholding the U.N. arms embargo but does not involve Turkish ships, diplomats said. \"What do you do when you have a NATO surveillance mission ... and one of those in the alliance is the one doing the trafficking, while saying it is implementing the (U.N.)embargo?\" said an official from France's armed forces ministry, requesting anonymity because of the sensitivity of the matter. The United States, frustrated by Turkey's purchase of Russian S-400 missiles and its military operations in Syria, has been seeking to calm the tensions in NATO, the diplomats said. Last October, U.S. Secretary of Defense Mark Esper said Turkey was \"going in the wrong direction\". While U.S. President Donald Trump enjoys a close relationship with Erdogan, he urged Turkey in May to help de-escalate the Libyan conflict. The Pentagon \"strives to preserve our relationship with Turkey while encouraging the Turkish government to pursue more constructive policies regarding the S-400 and other areas of disagreement,\" said U.S. Army Lieutenant Colonel Thomas Campbell, a Pentagon spokesman. FRENCH DEMANDS French Armed Forces Minister Florence Parly told the European Parliament on July 2 that NATO must make Ankara realise it cannot \"violate\" NATO rules. But French diplomats also say Paris is not looking to expel Turkey, and NATO has no formal mechanism to punish or expel members. Still, NATO could threaten to remove assets from Turkey, such as a radar, Patriot missiles or NATO AWACS aircraft. French Foreign Minister Jean-Yves Le Drian wants EU foreign ministers to consider new sanctions on Ankara during a video meeting on July 13. \"The main problem for Europe is Russia. The ambivalence of Turkey, with one foot in each camp, is the troubling factor,\" said Marc Pierini, a former EU ambassador to Turkey with the Carnegie Europe think tank. Turkey has the second-largest military in NATO and gives the alliance a strategic presence, notably on the Black and Mediterranean seas. \"Imagine NATO without Turkey! You would have no NATO,\" ambassador Musa said. France made four concrete demands of NATO in its July letter to Stoltenberg, the contents of which were laid out to Reuters. It wants all 30 allies to reaffirm commitment to respecting the U.N. arms embargo on Libya, to ensure NATO signals are not used during national missions, to improve coordination between the NATO and EU missions in the Mediterranean, and to avoid similar incidents in the future. At the last NATO defence ministers' meeting in late June, via video link, eight countries including Germany, Italy and Spain backed seeking a more cooperative approach from Turkey. French diplomats cite Turkey signing off on a NATO defence plan for the Baltics and Poland late last month, after holding it up for months, as a first sign of success. Yet there is a risk of a long-term rift at NATO if Erdogan does not change course, analysts say. \"Turkey considers itself big enough now to be independent from all sides,\" Pierini said. Additional reporting by Idrees Ali in Washington, Editing by Frances Kerry and Timothy Heritage Our Standards: The Thomson Reuters Trust Principles. , opens new tab Suggested Topics: World Share X Facebook Linkedin Email Link Purchase Licensing Rights Read Next Russian jets enter Estonia's airspace in latest test for NATO Business category Trump to impose $100,000 fee per year for H-1B visas, in blow to tech Middle East category Israel presses ahead with Gaza City assault, displaced Palestinians panic China category Trump and Xi make progress on TikTok deal, plan to meet in South Korea World category Zelenskiy says Ukrainian forces inflict heavy losses on Russia in counteroffensive Americas category Trump says US struck alleged drug vessel in latest operation",
+                "snippet": "Jul 7, 2020 ... PARIS/BRUSSELS (Reuters) - For France, it was the final straw. For Turkey, it was a misunderstanding. For NATO, it could be a turning point.",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:32:58.638772",
+                "content_id": "70b40291e6746c5f6e540d9d2a1b578f"
+              },
+              {
+                "claim_text": "This incident highlights the need for better integration of immigrants into local communities.",
+                "claim_bias_x": 0.47,
+                "claim_significance_y": 0.7,
+                "source_url": "https://www.bbc.com/news/uk-66798508",
+                "source_title": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022",
+                "source_domain": "www.bbc.com",
+                "content": "Rogue Russian pilot tried to shoot down RAF aircraft in 2022 14 September 2023 Share Save Jonathan Beale Defence correspondent Share Save EPA A Russian SU-27, like those pictured, released a missile near the RAF plane A Russian pilot tried to shoot down an RAF surveillance plane after believing he had permission to fire, the BBC has learned. The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time . Russia had claimed the incident last September was caused by a \"technical malfunction\". The UK's Ministry of Defence (MoD) publicly accepted the Russian explanation. But now three senior Western defence sources with knowledge of the incident have told the BBC that Russian communications intercepted by the RAF RC-135 Rivet Joint aircraft give a very different account from the official version. The RAF plane - with a crew of up to 30 - was flying a surveillance mission over the Black Sea in international airspace on 29 September last year when it encountered two Russian SU-27 fighter jets. The intercepted communications show that one of the Russian pilots thought he had been given permission to target the British aircraft, following an ambiguous command from a Russian ground station. However, the second Russian pilot did not. He remonstrated and swore at his wingman when he fired the first missile. The Rivet Joint is loaded with sensors to intercept communications. The RAF crew would have been able to listen in to the incident which could have resulted in their own deaths. The MoD will not release details of those communications. Responding to these new revelations an MoD spokesperson said: \"Our intent has always been to protect the safety of our operations, avoid unnecessary escalation and inform the public and international community.\" What really happened As the two Russian SU-27s approached the RAF spy plane, they received a communication from their ground station controller. One Western source told the BBC the words they received were to the effect of \"you have the target\". This ambiguous language was interpreted by one of the Russian pilots as permission to fire. The loose language appears to have shown a high degree of unprofessionalism by those involved, sources said. In contrast, Nato pilots use very precise language when asking for and receiving permission to fire. The Russian pilot released an air-to-air missile, which successfully launched but failed to lock on to its target, the BBC has been told. It was a miss, not a malfunction. Defence sources have told the BBC that a row then broke out between the two Russian pilots. The pilot of the second SU-27 did not think they had been given permission to fire. He is said to have sworn at his comrade, effectively asking him what he thought he was doing. Yet the first pilot still released another missile. We had been told that the second missile simply fell from the wing - suggesting the weapon either malfunctioned or that the launch was aborted. What the UK MoD said happened Three weeks later, the UK government confirmed the incident had taken place - after an explanation from the Russian Ministry of Defence called it a \"technical malfunction\". In a statement to MPs on 20 October, the then Defence Secretary Ben Wallace called it a \"potentially dangerous engagement\". But he accepted the Russian explanation, saying: \"We do not consider this incident to constitute a deliberate escalation on the part of the Russians, and our analysis concurs that it was due to a malfunction.\" Russian jet released missile near RAF aircraft What the US said happened However, a secret intelligence leak revealed that the US military spoke of what happened in more stark terms. In a raft of documents, published online by US airman Jack Teixera, the same incident was described as \"a near shoot-down\". \"The incident was far more serious than originally portrayed and could have amounted to an act of war,\" the New York Times reported. According to two US defence officials, the newspaper said, the Russian pilot had misinterpreted an order from the ground. The Russian pilot \"who'd locked on the British Aircraft, fired, but the missile did not launch properly.\" The newspaper also quoted an unnamed US defence official describing the incident \"as really, really scary\". In response to the leaked report of a \"near shoot-down\" the UK MoD issued another statement which added more fog than clarity. The MoD claimed a \"significant proportion of the content of these reports [from the documents] is untrue, manipulated or both\". Why the secrecy? There may be several reasons why the UK's MoD was reluctant to give the full details. First, the UK would not want to publicise the extent of its intelligence gathering and details of the intercepted communications. More importantly neither side wanted an escalation - one which could potentially draw a Nato member into military confrontation with Russia. But the incident does show, once again, how one mistake and miscalculation by one individual could spark a wider conflict. The MoD has now told the BBC that \"this incident is a stark reminder of the potential consequences of Putin's barbaric invasion of Ukraine.\" This is not the first time a reckless Russian pilot has targeted a Nato aircraft in international air space. In March earlier this year, a Russian jet brought down a US unmanned surveillance drone, also flying over the Black Sea. In that incident the Russian pilot was awarded a medal, but most experts agree it was down to luck rather than skill or judgement. It highlights serious questions about the discipline and professionalism of Russia's air force. Despite the near shoot down, the RAF has continued to conduct surveillance flights over the Black Sea - a testament to the courage of the crews who narrowly avoided a disaster. Since the incident, these RAF surveillance flights have been escorted by Typhoon fighter jets armed with air-to-air missiles. The UK is the only Nato ally to conduct crewed missions over the Black Sea. Intercepting Russian 'Zombies' at a Nato airbase US airman hit with new charges in Pentagon leaks Duelling with Russian jets in the skies over Ukraine Russia-Ukraine war Royal Air Force Russia Ministry of Defence",
+                "snippet": "Sep 13, 2023 ... The pilot fired two missiles, the first of which missed rather than malfunctioned as claimed at the time. Russia had claimed the incident last ...",
+                "search_query": "incident site:bbc.com OR site:reuters.com OR site:apnews.com OR site:npr.org",
+                "extracted_at": "2025-09-20T12:33:26.116306",
+                "content_id": "310edb352fdab8fc55da459c4f5ae698"
+              }
+            ],
+            "processing_time_seconds": 43.098312854766846,
+            "search_time_seconds": 3.6027133464813232,
+            "extract_time_seconds": 39.49556875228882,
+            "success": true
+          }
+        ],
+        "average_time_per_claim": 31.23163813352585,
+        "success_rate_percent": 100.0,
+        "total_claims_processed": 8,
+        "total_available_claims": 16,
+        "tested_all_claims": false,
+        "leftist_claims_available": 12,
+        "common_claims_available": 4,
+        "leftist_claims_processed": 5,
+        "common_claims_processed": 3,
+        "mode_name": "⚡ FAST MODE - WITH CONTENT",
+        "speed_mode": true,
+        "total_time_minutes": 4.164218417803446,
+        "estimated_full_time_minutes": 8.328436835606892
+      }
+    }
+  ]
+}

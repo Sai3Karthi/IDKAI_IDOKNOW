@@ -1,5 +1,5 @@
 // Basic API helper wrapping fetch with JSON handling & error surface.
-const BASE_URL = process.env.REACT_APP_API_BASE || 'http://localhost:8001';
+const BASE_URL = process.env.REACT_APP_API_BASE || 'http://localhost:8000';
 
 async function request(path, { method = 'GET', headers = {}, body, ...rest } = {}) {
 	const opts = {
